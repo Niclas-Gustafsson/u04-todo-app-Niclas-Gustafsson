@@ -261,6 +261,7 @@ main .container .main-dashboard .login-direct a {
   background-color: #2A6D69;
   border-radius: 5px;
   font-size: 1.2rem;
+  border: none;
 }
 
 .signup-main .container .signup-form input[type="submit"]:hover {
