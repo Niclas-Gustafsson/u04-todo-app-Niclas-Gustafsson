@@ -4,7 +4,8 @@
 @import './abstracts/variables';
 @import './abstracts/mixins';
 //Layout
-
+@import './layout/nav';
 //Pages
-
+@import './pages/index';
+@import './pages/signup';
 //Layout - responsive

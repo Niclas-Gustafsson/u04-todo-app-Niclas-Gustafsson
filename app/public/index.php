@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/sass/dist/css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
     <title>Thapp</title>
 </head>
 <body>
@@ -22,25 +22,30 @@
         <section class="container">
             <nav class="nav">
                 <div class="logo-wrapper nav-left">
-                    <img src="" alt="">
+                    <a href="index.php"><img class="logo" src="./sass/dist/images/thapp-logo.svg" alt=""></a>
+                </div>
+                <div id="hamburger" class="hamburger">
+                    <span class="hamburger__lines"></span>
                 </div>
                 <div class="navigation nav-right">
+
                     <ul class="nav-items">
-                        <li class="nav-item"><a class="nav-item_links active" href="">Thapp</a></li>
-                        <li class="nav-item"><a class="nav-item_links" href="">Login</a></li>
-                        <li class="nav-item"><a class="nav-item_links" href="">Signup</a></li>
+                        <li class="nav-item"><a class="nav-item__links active" href="index.php">Thapp</a></li>
+                        <li class="nav-item"><a class="nav-item__links" href="login.php">Login</a></li>
+                        <li class="nav-item"><a class="nav-item__links" href="signup.php">Signup</a></li>
                     </ul>
                 </div>
             </nav>
-        </section>
-        <section class="main-dashboard">
-            <h1 class="heading">Thapp</h1>
-            <h2 class="sub-heading">Thapp is a simplified note-taking app to get your days running smoothly.</h2>
-
-            <p class="cta-text">Sign up now and boost your productivity</p>
-            <a href="signup.php" class="cta">Sign up!</a>
+            <section class="main-dashboard">
+                <h1 class="heading">Thapp</h1>
+                <h2 class="sub-heading">Thapp is a simplified note-taking app to get your days running smoothly.</h2>
+    
+                <p class="cta-text">Sign up now and boost your productivity</p>
+                <a href="signup.php" class="cta">Sign up!</a>
+            </section>
         </section>
     </main>
 
+    <script src="js/index.js" defer></script>
 </body>
 </html>

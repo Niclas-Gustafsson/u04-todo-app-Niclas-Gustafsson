@@ -1,0 +1,115 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+   
+    padding: 1rem;
+    background-color: $lightGreen;
+    
+    .nav-left {
+
+        z-index:4;
+        a {
+            .logo {
+                height: 30px;
+                // width: 80px;
+            }
+        }
+    }
+
+    .hamburger{
+    position: absolute;
+    z-index: 3;
+    right: 1rem;
+    top: 1.4rem;
+    height: 30px;
+    width: 30px;
+    @include transition-ease;
+    cursor: pointer;
+
+        &__lines {
+            position: absolute;
+            right: -1px;
+            top:10px;
+            height: 3px;
+            width: 30px;
+            background-color: $text-clr;
+            @include transition-ease;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -10px;
+                width: 30px;
+                height: 3px;
+                background-color: $text-clr;
+                @include transition-ease;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 10px;
+                width: 22px;
+                height: 3px;
+                background-color: $text-clr;
+                @include transition-ease;
+            }
+            // On click, rotate the hamburger and hide the middle bar. Coordinate before and after into an X.
+            &.open {
+                // display: block;
+                transform: rotate(360deg);
+                background: transparent;
+
+                &::before {
+                    transform: rotate(45deg) translate(4px, 10px);
+                }
+                &::after {
+                    width: 30px;
+                    transform: rotate(-45deg) translate(4px, -10px);
+                }
+            }
+        }
+    }
+    .nav-right {
+        // width: 36px; //Not needed?
+        @include transition-ease;
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        margin:0;
+        padding:0;
+        left: 0;
+        top:-100%; 
+        width: 100vw;
+        height: 100vh;
+        background-color: $lightGreen;
+        @include transition-ease;
+
+        &.nav-open {
+            display: flex;
+            top: 0;
+            @include transition-ease;
+
+            .nav-item {
+                list-style: none;
+                margin-bottom: 3rem;
+    
+                &__links {
+                    text-decoration: none;
+                    font-size: 2rem;
+                    color: $text-clr;
+    
+                    &.active {
+                        color: $darkGreen;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+}
