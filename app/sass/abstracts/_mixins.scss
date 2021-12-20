@@ -1,4 +1,17 @@
 
+//Typography
+@mixin h1 {
+    font-size: 4rem;
+    margin: 1rem 0 1rem 0;
+    color: $darkGreen;
+    font-weight: 600;
+}
+@mixin h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-weight: 400;
+}
+
 
 //Transition
 @mixin transition-ease {

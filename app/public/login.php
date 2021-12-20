@@ -38,7 +38,17 @@
                 </div>
             </nav>
             <section class="main-dashboard">
-                
+            <img class="dashboard-img" src="../sass/dist/images/thapp-logo.svg" alt="Thapp logo">
+                <h1 class="signup-heading">Thapp</h1>
+                <h2 class="signup-sub-heading">Login to your account</h2>
+                <form action="" class="signup-form">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="text">
+                    <input id="signup-btn" type="submit" name="submit" value="Login">
+                </form>
+                <p class="login-direct">Or click here to <a href="signup.php">Sign up</a></p>
             </section>
         </section>
     </main>

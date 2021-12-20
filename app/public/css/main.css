@@ -89,11 +89,6 @@ body {
           transform: rotate(-45deg) translate(4px, -10px);
 }
 
-.nav .nav-right {
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
 .nav .nav-right .nav-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,6 +227,46 @@ main .container .main-dashboard .login-direct a {
   color: #2A6D69;
 }
 
+.signup-main {
+  color: #3D3D3D;
+}
+
+.signup-main .container .signup-heading {
+  font-size: 4rem;
+  margin: 1rem 0 1rem 0;
+  color: #2A6D69;
+  font-weight: 600;
+}
+
+.signup-main .container .signup-sub-heading {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 400;
+}
+
+.signup-main .container .signup-form {
+  width: 90%;
+}
+
+.signup-main .container .signup-form input {
+  width: 278px;
+  height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.signup-main .container .signup-form input[type="submit"] {
+  height: 3rem;
+  margin-top: 2rem;
+  color: #ffffff;
+  background-color: #2A6D69;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.signup-main .container .signup-form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 1024px) {
   body {
     width: 100vw;
@@ -339,10 +374,20 @@ main .container .main-dashboard .login-direct a {
     display: none;
   }
   body main .container .main-dashboard .cta {
+    margin: 1.5rem 0 0.5rem 0;
     padding: 1rem 5rem;
   }
   body footer {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .signup-main .container .main-dashboard .signup-sub-heading {
+    margin-bottom: 1rem;
+  }
+  .signup-main .container .main-dashboard .signup-form {
+    width: 300px;
   }
 }
 /*# sourceMappingURL=main.css.map */

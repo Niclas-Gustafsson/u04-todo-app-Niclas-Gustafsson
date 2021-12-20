@@ -9,10 +9,9 @@
             justify-content: center;
             align-items: center;
             width: 100vw;
-        height: 100vh;
+            height: 100vh;
                  
             .container {
-                // position: absolute;
                 box-sizing: border-box;
                 display: flex;
                 flex-direction: row;
@@ -34,7 +33,6 @@
                         display: flex;
                         justify-content: center;
                         align-self: center;
-                        // height: 100%;
 
                         .logo {
                             margin: 0 auto;
@@ -80,6 +78,7 @@
                     }
 
                     .cta {
+                        margin: 1.5rem 0 0.5rem 0;
                         padding: 1rem 5rem;
                     }
                 }

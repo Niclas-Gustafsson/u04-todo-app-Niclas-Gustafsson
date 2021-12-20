@@ -1,0 +1,16 @@
+@include media-desktop {
+    .signup-main {
+
+        .container {
+
+            .main-dashboard {
+                .signup-sub-heading {
+                    margin-bottom: 1rem;
+                }
+                .signup-form {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
