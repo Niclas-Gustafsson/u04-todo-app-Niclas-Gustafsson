@@ -2,8 +2,8 @@
 const hamburger = document.querySelector('#hamburger');
 const hamburgerLines = document.querySelector('.hamburger__lines');
 const mobileMenu = document.querySelector('.nav-items');
-const navRight = document.querySelector('.nav-right');
-const nav = document.querySelector('.nav');
+// const navRight = document.querySelector('.nav-right');
+// const nav = document.querySelector('.nav');
 let showMenu = false;
 
 //Eventlisteners
