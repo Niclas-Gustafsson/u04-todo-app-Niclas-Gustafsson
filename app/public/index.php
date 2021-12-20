@@ -37,14 +37,20 @@
                 </div>
             </nav>
             <section class="main-dashboard">
+                <img src="../sass/dist/images/thapp-logo.svg" alt="Thapp logo">
                 <h1 class="heading">Thapp</h1>
                 <h2 class="sub-heading">Thapp is a simplified note-taking app to get your days running smoothly.</h2>
     
                 <p class="cta-text">Sign up now and boost your productivity</p>
                 <a href="signup.php" class="cta">Sign up!</a>
+                <p class="login-direct">Or click here to <a href="login.php">log in</a></p>
             </section>
         </section>
     </main>
+    <footer>
+        <img src="../sass/dist/images/thapp-logo.svg" alt="Thapp logo">
+        <p>&copy; Copyright Thapp Ic. 2021 </p>
+    </footer>
 
     <script src="js/index.js" defer></script>
 </body>

@@ -15,6 +15,8 @@ body {
           justify-content: space-between;
   padding: 1rem;
   background-color: #E3FFF5;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .nav .nav-left {
@@ -32,8 +34,8 @@ body {
   top: 1.4rem;
   height: 30px;
   width: 30px;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
 
@@ -44,8 +46,8 @@ body {
   height: 3px;
   width: 30px;
   background-color: #3D3D3D;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .nav .hamburger__lines::before {
@@ -55,8 +57,8 @@ body {
   width: 30px;
   height: 3px;
   background-color: #3D3D3D;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .nav .hamburger__lines::after {
@@ -66,8 +68,8 @@ body {
   width: 22px;
   height: 3px;
   background-color: #3D3D3D;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .nav .hamburger__lines.open {
@@ -88,12 +90,14 @@ body {
 }
 
 .nav .nav-right {
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .nav .nav-right .nav-items {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -108,21 +112,20 @@ body {
   margin: 0;
   padding: 0;
   left: 0;
-  top: -100%;
   width: 100vw;
   height: 100vh;
   background-color: #E3FFF5;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .nav .nav-right .nav-items.nav-open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  top: 0;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .nav .nav-right .nav-items.nav-open .nav-item {
@@ -140,7 +143,22 @@ body {
   color: #2A6D69;
 }
 
-main .container .main-dashboard {
+.nav .nav-right .nav-items .nav-item {
+  list-style: none;
+  margin-bottom: 3rem;
+}
+
+.nav .nav-right .nav-items .nav-item__links {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #3D3D3D;
+}
+
+.nav .nav-right .nav-items .nav-item__links.active {
+  color: #2A6D69;
+}
+
+footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,5 +166,69 @@ main .container .main-dashboard {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #3D3D3D;
+  background-color: #E3FFF5;
+  padding: 2rem;
+}
+
+footer img {
+  height: 40px;
+}
+
+main .container .main-dashboard {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #3D3D3D;
+  padding: 2rem 1rem;
+}
+
+main .container .main-dashboard .heading {
+  font-size: 4rem;
+  margin: 1rem 0 1rem 0;
+  color: #2A6D69;
+  font-weight: 600;
+}
+
+main .container .main-dashboard img {
+  height: 70px;
+}
+
+main .container .main-dashboard .sub-heading {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 400;
+}
+
+main .container .main-dashboard .cta {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #2A6D69;
+  padding: 1rem 6rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+main .container .main-dashboard .login-direct a {
+  text-decoration: none;
+  color: #2A6D69;
 }
 /*# sourceMappingURL=main.css.map */

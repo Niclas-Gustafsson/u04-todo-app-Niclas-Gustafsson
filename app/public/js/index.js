@@ -3,6 +3,7 @@ const hamburger = document.querySelector('#hamburger');
 const hamburgerLines = document.querySelector('.hamburger__lines');
 const mobileMenu = document.querySelector('.nav-items');
 const navRight = document.querySelector('.nav-right');
+const nav = document.querySelector('.nav');
 let showMenu = false;
 
 //Eventlisteners
@@ -15,10 +16,8 @@ hamburger.addEventListener("click", menuToggle);
 //Toggle menu for mobile
 function menuToggle() {
     if(!showMenu) {
-        // hamburger.classList.add('open');
         hamburgerLines.classList.add('open');
         mobileMenu.classList.add('nav-open');
-        // navRight.classList.add('nav-open');
         showMenu = true;
     } else {
         // hamburger.classList.remove('open');
