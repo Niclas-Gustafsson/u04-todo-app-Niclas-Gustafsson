@@ -1,9 +1,11 @@
 {
     "version": 3,
-    "mappings": "ACAA,AAAA,IAAI,AAAC,CACD,MAAM,CAAE,MAAM,CACd,OAAO,CAAE,CAAC,CACV,UAAU,CAAE,UAAU,CACtB,WAAW,CAAE,mBAAmB,CAChC,gBAAgB,CAAE,KAAK,CAC1B",
+    "mappings": "ACAA,AAAA,IAAI,AAAC,CACD,MAAM,CAAE,MAAM,CACd,OAAO,CAAE,CAAC,CACV,UAAU,CAAE,UAAU,CACtB,WAAW,CAAE,mBAAmB,CACnC",
     "sources": [
         "../../main.scss",
-        "../../base/resets.scss"
+        "../../base/_resets.scss",
+        "../../abstracts/_variables.scss",
+        "../../abstracts/_mixins.scss"
     ],
     "names": [],
     "file": "main.min.css"
