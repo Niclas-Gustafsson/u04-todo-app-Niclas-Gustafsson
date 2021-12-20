@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
-    <title>Thapp</title>
+    <title>Welcome to Thapp</title>
 </head>
 <body>
     <main class="main">
@@ -49,7 +49,7 @@
     </main>
     <footer>
         <img src="../sass/dist/images/thapp-logo.svg" alt="Thapp logo">
-        <p>&copy; Copyright Thapp Ic. 2021 </p>
+        <p>&copy; Copyright Thapp Inc. 2021 </p>
     </footer>
 
     <script src="js/index.js" defer></script>

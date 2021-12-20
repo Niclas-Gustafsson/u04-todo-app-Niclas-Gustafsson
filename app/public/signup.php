@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
-    <title>Signup</title>
+    <title>Thapp signup</title>
 </head>
 <body class="signup-body">
 <main class="signup-main">
@@ -27,9 +27,9 @@
                 <div class="navigation nav-right">
 
                     <ul class="nav-items">
-                        <li class="nav-item"><a class="nav-item__links active" href="index.php">Thapp</a></li>
+                        <li class="nav-item"><a class="nav-item__links" href="index.php">Thapp</a></li>
                         <li class="nav-item"><a class="nav-item__links" href="login.php">Login</a></li>
-                        <li class="nav-item"><a class="nav-item__links" href="signup.php">Signup</a></li>
+                        <li class="nav-item"><a class="nav-item__links active" href="signup.php">Signup</a></li>
                     </ul>
                 </div>
             </nav>
@@ -38,7 +38,10 @@
             </section>
         </section>
     </main>
-    
+    <footer>
+        <img src="../sass/dist/images/thapp-logo.svg" alt="Thapp logo">
+        <p>&copy; Copyright Thapp Inc. 2021 </p>
+    </footer>
     <script src="js/index.js" defer></script>
 </body>
 </html>

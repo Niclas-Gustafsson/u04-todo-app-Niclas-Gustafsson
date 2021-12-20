@@ -42,7 +42,10 @@
             </section>
         </section>
     </main>
-    
+    <footer>
+        <img src="../sass/dist/images/thapp-logo.svg" alt="Thapp logo">
+        <p>&copy; Copyright Thapp Inc. 2021 </p>
+    </footer>
     <script src="js/index.js" defer></script>
 </body>
 </html>
