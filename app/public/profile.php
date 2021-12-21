@@ -1,5 +1,5 @@
 
-
+<?php ?>
 
 
 
@@ -17,12 +17,12 @@
     <link rel="stylesheet" href="/css/main.css">
     <title>Profile</title>
 </head>
-<body class="signup-body">
-<main class="signup-main">
+<body class="">
+<main class="home-main">
         <section class="container">
-            <nav class="nav">
+        <nav class="nav">
                 <div class="logo-wrapper nav-left">
-                    <a href="index.php"><img class="logo" src="./sass/dist/images/thapp-logo.svg" alt=""></a>
+                    <a href="index.php"><img class="logo" src="./images/thapp-logo.svg" alt="Thapp logo"></a>
                 </div>
                 <div id="hamburger" class="hamburger">
                     <span class="hamburger__lines"></span>
@@ -30,19 +30,79 @@
                 <div class="navigation nav-right">
 
                     <ul class="nav-items">
-                        <li class="nav-item"><a class="nav-item__links active" href="index.php">Thapp</a></li>
-                        <li class="nav-item"><a class="nav-item__links" href="login.php">Login</a></li>
-                        <li class="nav-item"><a class="nav-item__links" href="signup.php">Signup</a></li>
+                        <li class="nav-item"><a class="nav-item__links" href="profile.php"><img src="./images/profile-default.svg" alt=""></a></li>
+
+                        <li class="nav-item"><a class="nav-item__links profile-name" href="profile.php">AdvancedUser</a></li>
+
+                        <li class="nav-item"><a class="nav-item__links active" href="profile.php">Profile</a></li>
+
+                        <li class="nav-item"><a class="nav-item__links" href="home.php">Home</a></li>
+
+                        <li class="nav-item"><a class="nav-item__links" href="create_note.php">Create</a></li>
+
+                        <li class="nav-item"><a class="nav-item__links" href="logout.php">Logout</a></li>
                     </ul>
                 </div>
             </nav>
-            <section class="main-dashboard">
-                
+            <section class="main-dashboard-profile">
+                <h1 class="profile-heading">Profile</h1>
+                <section class="dashboard-body">
+                    <section class="account-info">
+                        <p class="profile-name">Full name</p>
+                        <p class="profile-username">Username</p>
+                        <p class="profile-email">Email</p>
+
+                        <a class="profile-cta" href="logout.php">Log out</a>
+                    </section>
+                    <section class="deleted-notes">
+                        <h2 class="deleted-title">Deleted notes</h2>
+                        <div class="deleted-note">
+                            <h3 class="deleted-title">Title of deleted note here</h3>
+                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
+                        </div>
+                        <div class="deleted-note">
+                            <h3 class="deleted-title">Title of deleted note here</h3>
+                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
+                        </div>
+                        <div class="deleted-note">
+                            <h3 class="deleted-title">Title of deleted note here</h3>
+                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
+                        </div>
+                        <div class="deleted-note">
+                            <h3 class="deleted-title">Title of deleted note here</h3>
+                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
+                        </div>
+                        <div class="deleted-note">
+                            <h3 class="deleted-title">Title of deleted note here</h3>
+                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
+                        </div>
+                        <div class="deleted-note">
+                            <h3 class="deleted-title">Title of deleted note here</h3>
+                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
+                        </div>
+                        <div class="deleted-note">
+                            <h3 class="deleted-title">Title of deleted note here</h3>
+                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
+                        </div>
+                        <div class="deleted-note">
+                            <h3 class="deleted-title">Title of deleted note here</h3>
+                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
+                        </div>
+                        <div class="deleted-note">
+                            <h3 class="deleted-title">Title of deleted note here</h3>
+                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
+                        </div>
+                        <div class="deleted-note">
+                            <h3 class="deleted-title">Title of deleted note here</h3>
+                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
+                        </div>
+                    </section>
+                </section> <!-- dashboard-body end -->
             </section>
         </section>
     </main>
     <footer>
-        <img src="../sass/dist/images/thapp-logo.svg" alt="Thapp logo">
+        <img src="./images/thapp-logo.svg" alt="Thapp logo">
         <p>&copy; Copyright Thapp Inc. 2021 </p>
     </footer>
     <script src="js/index.js" defer></script>
