@@ -15,17 +15,21 @@
                 border-radius: 0 10px 10px 0;
                 .dashboard-body {
                     height: 100%;
+                    width:90%;
                     display: flex;
                     flex-direction: row;
                     padding-bottom: 1rem;
                     overflow-y: hidden;
                     // flex-wrap: wrap;
 
+                    .account-info {
+                        width:50%;
+                    }
                     .deleted-notes {
                         margin: 0 0 0 2rem;
                         overflow-y: scroll;
                         height: 80%;
-                        width: 100%;
+                        width: 50%;
                     }
                 }
             }

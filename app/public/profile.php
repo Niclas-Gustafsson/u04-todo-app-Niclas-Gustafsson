@@ -48,9 +48,9 @@
                 <h1 class="profile-heading">Profile</h1>
                 <section class="dashboard-body">
                     <section class="account-info">
-                        <p class="profile-name">Full name</p>
-                        <p class="profile-username">Username</p>
-                        <p class="profile-email">Email</p>
+                        <p class="profile-name">Full name: Test Haraldsson</p>
+                        <p class="profile-username">Username:Thorwaldzz</p>
+                        <p class="profile-email">Email:Thor.dizz@mail.com</p>
 
                         <a class="profile-cta" href="logout.php">Log out</a>
                     </section>

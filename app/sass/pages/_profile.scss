@@ -14,6 +14,7 @@
                 display:flex;
                 flex-direction: column;
                 align-items: center;
+                padding-bottom: 2rem;
                 .account-info {
                     overflow-y:hidden;
                     box-sizing: border-box;
@@ -27,7 +28,7 @@
 
                     p {
                         font-size: 1rem;
-                        margin:0.3rem;
+                        // margin:0.3rem;
                     }
 
                     .profile-cta {

@@ -430,6 +430,7 @@ main .container .main-dashboard .login-direct a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 2rem;
 }
 
 .home-main .container .main-dashboard-profile .dashboard-body .account-info {
@@ -454,7 +455,6 @@ main .container .main-dashboard .login-direct a {
 
 .home-main .container .main-dashboard-profile .dashboard-body .account-info p {
   font-size: 1rem;
-  margin: 0.3rem;
 }
 
 .home-main .container .main-dashboard-profile .dashboard-body .account-info .profile-cta {
@@ -726,6 +726,7 @@ main .container .main-dashboard .login-direct a {
   }
   .home-main .container .main-dashboard-profile .dashboard-body {
     height: 100%;
+    width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -736,11 +737,14 @@ main .container .main-dashboard .login-direct a {
     padding-bottom: 1rem;
     overflow-y: hidden;
   }
+  .home-main .container .main-dashboard-profile .dashboard-body .account-info {
+    width: 50%;
+  }
   .home-main .container .main-dashboard-profile .dashboard-body .deleted-notes {
     margin: 0 0 0 2rem;
     overflow-y: scroll;
     height: 80%;
-    width: 100%;
+    width: 50%;
   }
 }
 /*# sourceMappingURL=main.css.map */
