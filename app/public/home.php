@@ -14,14 +14,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
-    <title>Signup</title>
+    <title>Home</title>
 </head>
-<body class="signup-body">
-<main class="signup-main">
+<body class="home-body">
+<main class="home-main">
         <section class="container">
             <nav class="nav">
                 <div class="logo-wrapper nav-left">
-                    <a href="index.php"><img class="logo" src="./sass/dist/images/thapp-logo.svg" alt="Thapp logo"></a>
+                    <a href="index.php"><img class="logo" src="./images/thapp-logo.svg" alt="Thapp logo"></a>
                 </div>
                 <div id="hamburger" class="hamburger">
                     <span class="hamburger__lines"></span>
@@ -37,24 +37,31 @@
             </nav>
             <section class="main-dashboard">
                 <h1 class="home-heading">Home</h1>
-                <div class="note-wrapper">
-                    <section class="note-head-wrapper">
-                        <h2 class="home-subheading">Active notes</h2>
-                    </section>
-                    <section class="card-wrapper">
-                        <div class="note">
+
+                <!-- Wrapper for all notes -->
+                <div class="notes-wrapper">
+                    <!-- Note card -->
+                    <section class="note-card">
+                        <section class="note-head-wrapper">
+                            <h2 class="home-subheading">Active notes</h2>
+                        </section>
+                        <section class="note-body-wrapper">
                             <h3 class="note-title">Remember to call Ted!</h3>
                             <p class="note-body">Been too long since we talked.</p>
-                            <a href=""><img src="../sass/dist/images/thapp-logo.svg" alt="Edit note"></a>
-                            
-                        </div>
+                            <div class="note-icons">
+                                <a href=""><img src="./images/edit.svg" alt="Edit note"></a>
+                                <a href=""><img src="./images/trash.svg" alt="Delete note"></a>
+                                <a href=""><img src="./images/check-dark.svg" alt="Mark note as done"></a>
+                                
+                            </div>
+                        </section>
                     </section>
                 </div>
             </section>
         </section>
     </main>
     <footer>
-        <img src="../sass/dist/images/thapp-logo.svg" alt="Thapp logo">
+        <img src="./images/thapp-logo.svg" alt="Thapp logo">
         <p>&copy; Copyright Thapp Inc. 2021 </p>
     </footer>
     <script src="js/index.js" defer></script>

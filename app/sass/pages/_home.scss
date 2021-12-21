@@ -1,0 +1,42 @@
+.home-body {
+    .home-main {
+
+        .container {
+
+            .main-dashboard {
+
+                .home-heading {
+                    font-size: 4rem;
+                }
+
+                .notes-wrapper {
+
+                    .note-card {
+                    background-color: green;
+                        .note-head-wrapper {
+                            
+                            .home-subheading {
+                                @include h2;
+                            }
+                        }
+
+                        .note-body-wrapper {
+
+                            .note-title {
+
+                            }
+
+                            .note-body {
+
+                            }
+
+                            .note-icons {
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

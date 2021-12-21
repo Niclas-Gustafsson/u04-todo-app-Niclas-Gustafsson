@@ -37,7 +37,7 @@
                 </div>
             </nav>
             <section class="main-dashboard">
-                <img id="index-dash-img" src="../sass/dist/images/thapp-logo.svg" alt="Thapp logo">
+                <img id="index-dash-img" src="./images/thapp-logo.svg" alt="Thapp logo">
                 <h1 class="heading">Thapp</h1>
                 <h2 class="sub-heading">Thapp is a simplified note-taking app to get your days running smoothly.</h2>
     
@@ -48,7 +48,7 @@
         </section>
     </main>
     <footer>
-        <img src="../sass/dist/images/thapp-logo.svg" alt="Thapp logo">
+        <img src="./images/thapp-logo.svg" alt="Thapp logo">
         <p>&copy; Copyright Thapp Inc. 2021 </p>
     </footer>
 

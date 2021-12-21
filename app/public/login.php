@@ -23,7 +23,7 @@
         <section class="container">
             <nav class="nav">
                 <div class="logo-wrapper nav-left">
-                    <a href="index.php"><img class="logo" src="./sass/dist/images/thapp-logo.svg" alt=""></a>
+                    <a href="index.php"><img class="logo" src="./images/thapp-logo.svg" alt=""></a>
                 </div>
                 <div id="hamburger" class="hamburger">
                     <span class="hamburger__lines"></span>
@@ -38,7 +38,7 @@
                 </div>
             </nav>
             <section class="main-dashboard">
-            <img class="dashboard-img" src="../sass/dist/images/thapp-logo.svg" alt="Thapp logo">
+            <img class="dashboard-img" src="./images/thapp-logo.svg" alt="Thapp logo">
                 <h1 class="signup-heading">Thapp</h1>
                 <h2 class="signup-sub-heading">Login to your account</h2>
                 <form action="" class="signup-form">
@@ -53,7 +53,7 @@
         </section>
     </main>
     <footer>
-        <img src="../sass/dist/images/thapp-logo.svg" alt="Thapp logo">
+        <img src="./images/thapp-logo.svg" alt="Thapp logo">
         <p>&copy; Copyright Thapp Inc. 2021 </p>
     </footer>
     <script src="js/index.js" defer></script>

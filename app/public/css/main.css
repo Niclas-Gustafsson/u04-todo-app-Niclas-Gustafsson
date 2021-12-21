@@ -268,6 +268,20 @@ main .container .main-dashboard .login-direct a {
   cursor: pointer;
 }
 
+.home-body .home-main .container .main-dashboard .home-heading {
+  font-size: 4rem;
+}
+
+.home-body .home-main .container .main-dashboard .notes-wrapper .note-card {
+  background-color: green;
+}
+
+.home-body .home-main .container .main-dashboard .notes-wrapper .note-card .note-head-wrapper .home-subheading {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 400;
+}
+
 @media screen and (min-width: 1024px) {
   body {
     width: 100vw;
