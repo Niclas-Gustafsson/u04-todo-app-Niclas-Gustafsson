@@ -40,18 +40,31 @@
 
                 <!-- Wrapper for all notes -->
                 <div class="notes-wrapper">
+                    <section class="note-head-wrapper">
+                        <h2 class="home-subheading">Active notes</h2>
+                    </section>
                     <!-- Note card -->
                     <section class="note-card">
-                        <section class="note-head-wrapper">
-                            <h2 class="home-subheading">Active notes</h2>
-                        </section>
                         <section class="note-body-wrapper">
                             <h3 class="note-title">Remember to call Ted!</h3>
                             <p class="note-body">Been too long since we talked.</p>
                             <div class="note-icons">
-                                <a href=""><img src="./images/edit.svg" alt="Edit note"></a>
-                                <a href=""><img src="./images/trash.svg" alt="Delete note"></a>
-                                <a href=""><img src="./images/check-dark.svg" alt="Mark note as done"></a>
+                                <a  href=""><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
+                                <a href=""><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
+                                <a href=""><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
+                                
+                            </div>
+                        </section>
+                    </section>
+
+                    <section class="note-card">
+                        <section class="note-body-wrapper">
+                            <h3 class="note-title">Test with Lorem</h3>
+                            <p class="note-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, voluptatibus. Facere eius quibusdam ipsum corporis ipsam maxime odit sed. Necessitatibus fuga inventore repellat aperiam quam? Sint, praesentium. Consequuntur, cupiditate incidunt.</p>
+                            <div class="note-icons">
+                                <a  href=""><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
+                                <a href=""><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
+                                <a href=""><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
                                 
                             </div>
                         </section>

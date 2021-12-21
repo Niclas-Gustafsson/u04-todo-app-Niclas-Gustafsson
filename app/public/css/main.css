@@ -268,18 +268,79 @@ main .container .main-dashboard .login-direct a {
   cursor: pointer;
 }
 
+.home-body .home-main .container {
+  background: linear-gradient(244.28deg, #379791 7.62%, rgba(51, 222, 140, 0) 107.36%);
+  width: 100vw;
+}
+
+.home-body .home-main .container .main-dashboard {
+  width: 95%;
+  padding: 2rem 0;
+}
+
 .home-body .home-main .container .main-dashboard .home-heading {
   font-size: 4rem;
+  margin: 1rem 0 1rem 0;
+  color: #2A6D69;
+  font-weight: 600;
+  color: #3D3D3D;
 }
 
-.home-body .home-main .container .main-dashboard .notes-wrapper .note-card {
-  background-color: green;
+.home-body .home-main .container .main-dashboard .notes-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  background-color: #E3FFF5;
+  border-radius: 10px;
+  padding: 0 1rem 1rem 1rem;
 }
 
-.home-body .home-main .container .main-dashboard .notes-wrapper .note-card .note-head-wrapper .home-subheading {
+.home-body .home-main .container .main-dashboard .notes-wrapper .note-head-wrapper .home-subheading {
   text-align: center;
   margin-bottom: 4rem;
   font-weight: 400;
+}
+
+.home-body .home-main .container .main-dashboard .notes-wrapper .note-card {
+  background-color: #ffffff;
+  margin-bottom: 1.2rem;
+  border-radius: 8px;
+}
+
+.home-body .home-main .container .main-dashboard .notes-wrapper .note-card .note-body-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.home-body .home-main .container .main-dashboard .notes-wrapper .note-card .note-body-wrapper .note-body {
+  font-size: 1rem;
+}
+
+.home-body .home-main .container .main-dashboard .notes-wrapper .note-card .note-body-wrapper .note-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.home-body .home-main .container .main-dashboard .notes-wrapper .note-card .note-body-wrapper .note-icons a .icon {
+  width: 1.7rem;
 }
 
 @media screen and (min-width: 1024px) {
