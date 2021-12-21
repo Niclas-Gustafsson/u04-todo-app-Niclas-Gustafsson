@@ -1,9 +1,7 @@
+<?php 
 
 
-
-
-
-
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +21,7 @@
         <section class="container">
             <nav class="nav">
                 <div class="logo-wrapper nav-left">
-                    <a href="index.php"><img class="logo" src="./sass/dist/images/thapp-logo.svg" alt=""></a>
+                    <a href="index.php"><img class="logo" src="./sass/dist/images/thapp-logo.svg" alt="Thapp logo"></a>
                 </div>
                 <div id="hamburger" class="hamburger">
                     <span class="hamburger__lines"></span>
@@ -38,7 +36,20 @@
                 </div>
             </nav>
             <section class="main-dashboard">
-                
+                <h1 class="home-heading">Home</h1>
+                <div class="note-wrapper">
+                    <section class="note-head-wrapper">
+                        <h2 class="home-subheading">Active notes</h2>
+                    </section>
+                    <section class="card-wrapper">
+                        <div class="note">
+                            <h3 class="note-title">Remember to call Ted!</h3>
+                            <p class="note-body">Been too long since we talked.</p>
+                            <a href=""><img src="../sass/dist/images/thapp-logo.svg" alt="Edit note"></a>
+                            
+                        </div>
+                    </section>
+                </div>
             </section>
         </section>
     </main>
