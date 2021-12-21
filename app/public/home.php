@@ -29,9 +29,17 @@
                 <div class="navigation nav-right">
 
                     <ul class="nav-items">
-                        <li class="nav-item"><a class="nav-item__links active" href="index.php">Thapp</a></li>
-                        <li class="nav-item"><a class="nav-item__links" href="login.php">Login</a></li>
-                        <li class="nav-item"><a class="nav-item__links" href="signup.php">Signup</a></li>
+                        <li class="nav-item"><a class="nav-item__links" href="profile.php"><img src="./images/profile-default.svg" alt=""></a></li>
+
+                        <li class="nav-item"><a class="nav-item__links profile-name" href="profile.php">AdvancedUser</a></li>
+
+                        <li class="nav-item"><a class="nav-item__links" href="profile.php">Profile</a></li>
+
+                        <li class="nav-item"><a class="nav-item__links active" href="home.php">Home</a></li>
+
+                        <li class="nav-item"><a class="nav-item__links" href="create_note.php">Create</a></li>
+
+                        <li class="nav-item"><a class="nav-item__links" href="logout.php">Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -44,31 +52,45 @@
                         <h2 class="home-subheading">Active notes</h2>
                     </section>
                     <!-- Note card -->
-                    <section class="note-card">
-                        <section class="note-body-wrapper">
-                            <h3 class="note-title">Remember to call Ted!</h3>
-                            <p class="note-body">Been too long since we talked.</p>
-                            <div class="note-icons">
-                                <a  href=""><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
-                                <a href=""><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
-                                <a href=""><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
-                                
-                            </div>
+                    <section class="card-wrapper">
+                        <section class="note-card">
+                            <section class="note-body-wrapper">
+                                <h3 class="note-title">Remember to call Ted!</h3>
+                                <p class="note-body">Been too long since we talked.</p>
+                                <div class="note-icons">
+                                    <a  href=""><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
+                                    <a href=""><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
+                                    <a href=""><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
+                                    
+                                </div>
+                            </section>
                         </section>
-                    </section>
 
-                    <section class="note-card">
-                        <section class="note-body-wrapper">
-                            <h3 class="note-title">Test with Lorem</h3>
-                            <p class="note-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, voluptatibus. Facere eius quibusdam ipsum corporis ipsam maxime odit sed. Necessitatibus fuga inventore repellat aperiam quam? Sint, praesentium. Consequuntur, cupiditate incidunt.</p>
-                            <div class="note-icons">
-                                <a  href=""><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
-                                <a href=""><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
-                                <a href=""><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
-                                
-                            </div>
+                        <section class="note-card">
+                            <section class="note-body-wrapper">
+                                <h3 class="note-title">Test with Lorem</h3>
+                                <p class="note-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, voluptatibus. Facere eius quibusdam ipsum corporis ipsam maxime odit sed. Necessitatibus fuga inventore repellat aperiam quam? Sint, praesentium. Consequuntur, cupiditate incidunt.</p>
+                                <div class="note-icons">
+                                    <a  href=""><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
+                                    <a href=""><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
+                                    <a href=""><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
+                                    
+                                </div>
+                            </section>
                         </section>
-                    </section>
+                        <section class="note-card">
+                            <section class="note-body-wrapper">
+                                <h3 class="note-title">Test with Lorem</h3>
+                                <p class="note-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, voluptatibus. Facere eius quibusdam ipsum corporis ipsam maxime odit sed. Necessitatibus fuga inventore repellat aperiam quam? Sint, praesentium. Consequuntur, cupiditate incidunt.</p>
+                                <div class="note-icons">
+                                    <a  href=""><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
+                                    <a href=""><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
+                                    <a href=""><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
+                                    
+                                </div>
+                            </section>
+                        </section>
+                    </section> <!-- card-wrapper end -->
                 </div>
             </section>
         </section>

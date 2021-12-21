@@ -1,6 +1,10 @@
 .nav {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+
+    width: 100%;
+
     padding: 1rem;
     background-color: $lightGreen;
     @include transition-ease;
@@ -79,9 +83,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: absolute;
+        position: fixed;
         margin:0;
         padding:0;
+        top:0;
         left: 0;
         width: 100vw;
         height: 100vh;
@@ -123,6 +128,10 @@
 
                 &.active {
                     color: $darkGreen;
+                }
+
+                &.profile-name {
+                    font-size: 1.5rem;
                 }
             }
         }

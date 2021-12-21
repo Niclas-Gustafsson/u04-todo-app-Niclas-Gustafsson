@@ -22,7 +22,7 @@
         <section class="container">
             <nav class="nav">
                 <div class="logo-wrapper nav-left">
-                    <a href="index.php"><img class="logo" src="./sass/dist/images/thapp-logo.svg" alt=""></a>
+                    <a href="index.php"><img class="logo" src="./images/thapp-logo.svg" alt=""></a>
                 </div>
                 <div id="hamburger" class="hamburger">
                     <span class="hamburger__lines"></span>

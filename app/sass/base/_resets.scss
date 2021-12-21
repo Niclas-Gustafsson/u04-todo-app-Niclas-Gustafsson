@@ -4,3 +4,10 @@ body {
     box-sizing: border-box;
     font-family: 'Kanit', sans-serif;
 }
+
+
+//Class to fix issue with nav, see index.js function with name "fixedNav".
+.nav-lock {
+    position: fixed;
+    width: 100%;
+}
