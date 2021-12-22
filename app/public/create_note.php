@@ -18,22 +18,30 @@
     <link rel="stylesheet" href="/css/main.css">
     <title>Create note</title>
 </head>
-<body class="signup-body">
-<main class="signup-main">
+<body class="home-body">
+<main class="home-main">
         <section class="container">
-            <nav class="nav">
-                <div class="logo-wrapper nav-left">
-                    <a href="index.php"><img class="logo" src="./sass/dist/images/thapp-logo.svg" alt=""></a>
-                </div>
+        <nav class="nav">
+                <!-- <div class="logo-wrapper nav-left">
+                    <a href="index.php"><img class="logo" src="./images/thapp-logo.svg" alt="Thapp logo"></a>
+                </div> -->
                 <div id="hamburger" class="hamburger">
                     <span class="hamburger__lines"></span>
                 </div>
                 <div class="navigation nav-right">
 
                     <ul class="nav-items">
-                        <li class="nav-item"><a class="nav-item__links active" href="index.php">Thapp</a></li>
-                        <li class="nav-item"><a class="nav-item__links" href="login.php">Login</a></li>
-                        <li class="nav-item"><a class="nav-item__links" href="signup.php">Signup</a></li>
+                        <li class="nav-item"><a class="nav-item__links" href="profile.php"><img src="./images/profile-default.svg" alt=""></a></li>
+
+                        <li class="nav-item"><a class="nav-item__links profile-name" href="profile.php">AdvancedUser</a></li>
+
+                        <li class="nav-item"><a class="nav-item__links" href="profile.php">Profile</a></li>
+
+                        <li class="nav-item"><a class="nav-item__links" href="home.php">Home</a></li>
+
+                        <li class="nav-item"><a class="nav-item__links active" href="create_note.php">Create</a></li>
+
+                        <li class="nav-item"><a class="nav-item__links" href="logout.php">Logout</a></li>
                     </ul>
                 </div>
             </nav>

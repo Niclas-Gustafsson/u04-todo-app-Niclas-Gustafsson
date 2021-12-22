@@ -726,7 +726,7 @@ main .container .main-dashboard .login-direct a {
   }
   .home-main .container .main-dashboard-profile .dashboard-body {
     height: 100%;
-    width: 90%;
+    width: 80%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

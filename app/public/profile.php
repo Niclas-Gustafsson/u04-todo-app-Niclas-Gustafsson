@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <title>Profile</title>
 </head>
-<body class="">
+<body class="home-body">
 <main class="home-main">
         <section class="container">
         <nav class="nav">
