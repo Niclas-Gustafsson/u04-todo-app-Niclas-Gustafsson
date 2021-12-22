@@ -41,7 +41,7 @@
             <img class="dashboard-img" src="./images/thapp-logo.svg" alt="Thapp logo">
                 <h1 class="signup-heading">Thapp</h1>
                 <h2 class="signup-sub-heading">Login to your account</h2>
-                <form action="" class="signup-form">
+                <form action="authenticate.php" class="signup-form" method="POST">
                     <label for="username">Username</label>
                     <input id="username" name="username" type="text">
                     <label for="password">Password</label>
