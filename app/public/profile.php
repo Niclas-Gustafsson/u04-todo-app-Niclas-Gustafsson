@@ -1,5 +1,16 @@
+<?php 
+include '../php/db.php';
+include '../php/functions.php';
 
-<?php ?>
+if(!isset($_SESSION['loggedin'])) {
+    header('location: index.php');
+    exit;
+}
+
+getUserData();
+// global $user;
+// var_dump($_SESSION['id']);
+?>
 
 
 
@@ -32,7 +43,7 @@
                     <ul class="nav-items">
                         <li class="nav-item"><a class="nav-item__links" href="profile.php"><img src="./images/profile-default.svg" alt=""></a></li>
 
-                        <li class="nav-item"><a class="nav-item__links profile-name" href="profile.php">AdvancedUser</a></li>
+                        <li class="nav-item"><a class="nav-item__links profile-name" href="profile.php"><?php echo $_SESSION['name'];?></a></li>
 
                         <li class="nav-item"><a class="nav-item__links active" href="profile.php">Profile</a></li>
 
@@ -48,9 +59,9 @@
                 <h1 class="profile-heading">Profile</h1>
                 <section class="dashboard-body">
                     <section class="account-info">
-                        <p class="profile-name">Full name: Test Haraldsson</p>
-                        <p class="profile-username">Username:Thorwaldzz</p>
-                        <p class="profile-email">Email:Thor.dizz@mail.com</p>
+                        <p class="profile-name">Full name: <?php echo $_SESSION['name'];?></p>
+                        <p class="profile-username">Username: <?php echo $_SESSION['username'];?></p>
+                        <p class="profile-email">Email: <?php echo $_SESSION['email'];?></p>
 
                         <a class="profile-cta" href="logout.php">Log out</a>
                     </section>

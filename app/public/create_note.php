@@ -1,5 +1,12 @@
+<?php 
+include '../php/db.php';
+include '../php/functions.php';
 
-
+if(!isset($_SESSION['loggedin'])) {
+    header('location: index.php');
+    exit;
+}
+?>
 
 
 
@@ -48,7 +55,7 @@
             <section class="main-dashboard">
             <h1 class="create-heading">Create note</h1>
                 <!-- <h2 class="signup-sub-heading">Login to your account</h2> -->
-                <form action="" class="create-form">
+                <form action="" class="create-form" method="POST">
                     <label for="title">Title</label>
                     <input id="title" name="title" type="text">
                     <label for="note">Note</label>

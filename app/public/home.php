@@ -37,7 +37,7 @@ if(!isset($_SESSION['loggedin'])) {
                     <ul class="nav-items">
                         <li class="nav-item"><a class="nav-item__links" href="profile.php"><img src="./images/profile-default.svg" alt=""></a></li>
 
-                        <li class="nav-item"><a class="nav-item__links profile-name" href="profile.php">AdvancedUser</a></li>
+                        <li class="nav-item"><a class="nav-item__links profile-name" href="profile.php"><?php echo $_SESSION['name'];?></a></li>
 
                         <li class="nav-item"><a class="nav-item__links" href="profile.php">Profile</a></li>
 

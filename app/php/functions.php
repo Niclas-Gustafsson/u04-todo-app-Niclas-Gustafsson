@@ -39,7 +39,9 @@ function authLogin() {
     if($user && password_verify($password, $user['password'])) {
         session_regenerate_id();
             $_SESSION['loggedin'] = TRUE;
-            $_SESSION['name'] = $_POST['username'];
+            $_SESSION['name'] = $user['name'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['email'] = $user['email'];
             $_SESSION['id'] = $user['id'];
 
             header('location: home.php');
@@ -47,8 +49,24 @@ function authLogin() {
         exit('Login failed');
     }
 }
-//Function for creating notes (connected to specific user)
 
+//Function for fetching userdata
+function getUserData() {
+    global $db;
+    // $username = $_POST['username'];
+    // $password = $_POST['password'];
+    $query = 'SELECT * FROM users WHERE id=:id';
+    $stmt = $db->prepare($query);
+    $stmt->bindValue(':id', $_SESSION['id']);
+    $stmt->execute();
+    $user = $stmt->fetch();
+    // var_dump($user);
+}
+//Function for creating notes (connected to specific user)
+function createNote() {
+    global $db;
+
+}
 //Function for reading user specific notes (table relationships)
 
 //Function for updating a note
