@@ -1,4 +1,11 @@
+<?php 
+include '../php/db.php';
+include '../php/functions.php';
 
+if(isset($_POST['submit'])) {
+    createUser();
+}
+?>
 
 
 <!DOCTYPE html>
@@ -37,7 +44,7 @@
             <img class="dashboard-img" src="./images/thapp-logo.svg" alt="Thapp logo">
                 <h1 class="signup-heading">Thapp</h1>
                 <h2 class="signup-sub-heading">Create a new account</h2>
-                <form action="" class="signup-form">
+                <form action="" class="signup-form" method="POST">
                     <label for="fullName">Full name</label>
                     <input id="fullName" name="fullName" type="text">
                     <label for="username">Username</label>
