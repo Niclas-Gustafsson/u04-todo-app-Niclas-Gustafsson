@@ -513,6 +513,56 @@ main .container .main-dashboard .login-direct a {
   width: 1.7rem;
 }
 
+.home-main {
+  color: #3D3D3D;
+}
+
+.home-main .container {
+  /* .signup-sub-heading {
+            @include h2;
+        } */
+}
+
+.home-main .container .create-heading {
+  font-size: 4rem;
+  margin: 1rem 0 1rem 0;
+  color: #2A6D69;
+  font-weight: 600;
+}
+
+.home-main .container .create-form {
+  width: 278px;
+  margin: 0 auto;
+}
+
+.home-main .container .create-form input {
+  width: 278px;
+  height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-main .container .create-form input[type="submit"] {
+  height: 3rem;
+  margin-top: 2rem;
+  color: #ffffff;
+  background-color: #2A6D69;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.home-main .container .create-form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.home-main .container .create-form #note {
+  height: 200px;
+  max-height: 300px;
+  width: 278px;
+  max-width: 278px;
+  background-color: #ffffff;
+}
+
 @media screen and (min-width: 1024px) {
   body {
     width: 100vw;

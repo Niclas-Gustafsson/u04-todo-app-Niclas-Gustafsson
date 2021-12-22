@@ -22,9 +22,9 @@
 <main class="home-main">
         <section class="container">
         <nav class="nav">
-                <!-- <div class="logo-wrapper nav-left">
+                <div class="logo-wrapper nav-left">
                     <a href="index.php"><img class="logo" src="./images/thapp-logo.svg" alt="Thapp logo"></a>
-                </div> -->
+                </div>
                 <div id="hamburger" class="hamburger">
                     <span class="hamburger__lines"></span>
                 </div>
@@ -46,12 +46,22 @@
                 </div>
             </nav>
             <section class="main-dashboard">
-                
+            <h1 class="create-heading">Create note</h1>
+                <!-- <h2 class="signup-sub-heading">Login to your account</h2> -->
+                <form action="" class="create-form">
+                    <label for="title">Title</label>
+                    <input id="title" name="title" type="text">
+                    <label for="note">Note</label>
+                    <textarea id="note" name="note"></textarea>
+                    <input type="submit" name="submit" value="Add note">
+                    <!-- <input id="create-btn" type="submit" name="submit" value="Add note"> -->
+                </form>
+                <p class="login-direct">Click here to see <a href="home.php">Notes</a></p>
             </section>
         </section>
     </main>
     <footer>
-        <img src="../sass/dist/images/thapp-logo.svg" alt="Thapp logo">
+        <img src="./images/thapp-logo.svg" alt="Thapp logo">
         <p>&copy; Copyright Thapp Inc. 2021 </p>
     </footer>
     

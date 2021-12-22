@@ -1,0 +1,45 @@
+.home-main {
+    color: $text-clr;
+
+    .container {
+
+        .create-heading {
+            @include h1;
+        }
+        /* .signup-sub-heading {
+            @include h2;
+        } */
+        .create-form {
+            width: 278px;
+            margin: 0 auto;
+
+            input {
+                width: 278px;
+                height: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            input[type="submit"] {
+                height: 3rem;
+                margin-top: 2rem;
+                color: $white;
+                background-color: $darkGreen;
+                border-radius: 5px;
+                font-size: 1.2rem;
+                border: none;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            #note {
+                height: 200px;
+                max-height: 300px;
+                width: 278px;
+                max-width: 278px;
+                background-color: $white;
+            }
+        }
+    }
+}

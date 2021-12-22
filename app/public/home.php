@@ -90,7 +90,7 @@
                                 </div>
                             </section>
                         </section>
-                        <a href="create.php" class="cta-create">Create note</a>
+                        <a href="create_note.php" class="cta-create">Create note</a>
                     </section> <!-- card-wrapper end -->
                 </div>
             </section>
