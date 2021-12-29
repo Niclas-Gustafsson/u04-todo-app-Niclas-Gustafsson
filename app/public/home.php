@@ -80,18 +80,18 @@ $stmt->execute();
                         <!-- Test for printing out table items -->
                             <?php 
                                 while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                   /*  echo $row['userID'] . '<br>';
-                                    echo $row['title'] . '<br>';
-                                    echo $row['body'] . '<br>'; */
-                                
-                            
+                                    // $_SESSION['noteTitle'] = $row['title'];
+                                    // $_SESSION['noteBody'] = $row['body'];
+                                    // $title = $_SESSION['noteTitle'];
+                                    // $body = $_SESSION['noteBody'];
+                                    
                             ?>
                             <section class="note-card">
                             <section class="note-body-wrapper">
                                 <h3 class="note-title"><?php echo $row['title'];?></h3>
                                 <p class="note-body"><?php echo $row['body'];?></p>
                                 <div class="note-icons">
-                                    <a  href=""><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
+                                    <a  href="update.php?id=<?php echo $row['noteID']?>&titleValue=<?php echo $row['title']?>&bodyValue=<?php echo $row['body'];?>"><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
                                     <a href=""><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
                                     <a href=""><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
                                     
@@ -99,7 +99,7 @@ $stmt->execute();
                             </section>
                         </section>
 
-                            <?php } ?> <!-- End of while loop -->
+                        <?php } ?> <!-- End of while loop -->
 
 
                         <!-- Test for printing out table items -->

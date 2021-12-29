@@ -70,7 +70,7 @@ function createNote() {
     $id = $_SESSION['id'];
     $query = 'INSERT INTO notes(userID, title, body) VALUES (:userID, :title, :body)';
     $stmt = $db->prepare($query);
-    $stmt->bindParam(':userID', $id);
+    $stmt->bindValue(':userID', $id);
     $stmt->bindValue(':title', $noteTitle);
     $stmt->bindValue(':body', $noteBody);
     $stmt->execute();
@@ -89,7 +89,22 @@ function getNote() {
     // var_dump($result);
 }
 //Function for updating a note
-
+function updateNote() {
+    global $db;
+    $title = $_POST['title'];
+    $body = $_POST['note'];
+    $id = $_POST['id'];
+    $query = 'UPDATE notes SET title = :title, body = :body WHERE noteID = :id';
+    $stmt= $db->prepare($query);
+    $stmt->bindParam(':title', $title, PDO::PARAM_STR,255);
+    $stmt->bindParam(':body', $body, PDO::PARAM_STR,255);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT,255);
+    if($stmt->execute()) {
+        header('location: home.php');
+    } else {
+        print_r($db->errorInfo());
+    }
+}
 //Function for deleting a note
 
 //Function for reading cleared notes?
