@@ -17,11 +17,11 @@ $stmt->bindParam(':id', $id);
 $stmt->execute();
 // $result = $stmt->fetchAll();
 // var_dump($result);
-while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+/* while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     echo $row['userID'] . '<br>';
     echo $row['title'] . '<br>';
     echo $row['body'] . '<br>';
-}
+} */
 
 
 
@@ -79,14 +79,32 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     <section class="card-wrapper">
                         <!-- Test for printing out table items -->
                             <?php 
+                                while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                                   /*  echo $row['userID'] . '<br>';
+                                    echo $row['title'] . '<br>';
+                                    echo $row['body'] . '<br>'; */
                                 
                             
                             ?>
+                            <section class="note-card">
+                            <section class="note-body-wrapper">
+                                <h3 class="note-title"><?php echo $row['title'];?></h3>
+                                <p class="note-body"><?php echo $row['body'];?></p>
+                                <div class="note-icons">
+                                    <a  href=""><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
+                                    <a href=""><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
+                                    <a href=""><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
+                                    
+                                </div>
+                            </section>
+                        </section>
+
+                            <?php } ?> <!-- End of while loop -->
 
 
                         <!-- Test for printing out table items -->
 
-                        <section class="note-card">
+                        <!-- <section class="note-card">
                             <section class="note-body-wrapper">
                                 <h3 class="note-title">Remember to call Ted!</h3>
                                 <p class="note-body">Been too long since we talked.</p>
@@ -97,7 +115,7 @@ while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                                     
                                 </div>
                             </section>
-                        </section>
+                        </section> -->
 
                         <!-- <section class="note-card">
                             <section class="note-body-wrapper">
