@@ -67,14 +67,27 @@ function createNote() {
     global $db;
     $noteTitle = $_POST['title'];
     $noteBody = $_POST['note'];
-    $query = 'INSERT INTO notes(title, body) VALUES (:title, :body)';
+    $id = $_SESSION['id'];
+    $query = 'INSERT INTO notes(userID, title, body) VALUES (:userID, :title, :body)';
     $stmt = $db->prepare($query);
+    $stmt->bindParam(':userID', $id);
     $stmt->bindValue(':title', $noteTitle);
     $stmt->bindValue(':body', $noteBody);
     $stmt->execute();
 }
 //Function for reading user specific notes (table relationships)
+function getNote() {
+    global $db;
+    $id = $_SESSION['id'];
+    // echo $id;
+    $stmt = $db->prepare('SELECT * FROM notes WHERE userID=:id');
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+    $result = $stmt->fetchAll();
 
+    
+    // var_dump($result);
+}
 //Function for updating a note
 
 //Function for deleting a note

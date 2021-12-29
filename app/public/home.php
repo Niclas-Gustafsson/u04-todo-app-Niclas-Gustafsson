@@ -7,6 +7,24 @@ if(!isset($_SESSION['loggedin'])) {
     exit;
 }
 
+//Fetch table data from notes table
+
+// getNote();
+$id = $_SESSION['id'];
+// echo $id;
+$stmt = $db->prepare('SELECT * FROM notes WHERE userID=:id');
+$stmt->bindParam(':id', $id);
+$stmt->execute();
+// $result = $stmt->fetchAll();
+// var_dump($result);
+while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    echo $row['userID'] . '<br>';
+    echo $row['title'] . '<br>';
+    echo $row['body'] . '<br>';
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +77,15 @@ if(!isset($_SESSION['loggedin'])) {
                     </section>
                     <!-- Note card -->
                     <section class="card-wrapper">
+                        <!-- Test for printing out table items -->
+                            <?php 
+                                
+                            
+                            ?>
+
+
+                        <!-- Test for printing out table items -->
+
                         <section class="note-card">
                             <section class="note-body-wrapper">
                                 <h3 class="note-title">Remember to call Ted!</h3>
@@ -72,7 +99,7 @@ if(!isset($_SESSION['loggedin'])) {
                             </section>
                         </section>
 
-                        <section class="note-card">
+                        <!-- <section class="note-card">
                             <section class="note-body-wrapper">
                                 <h3 class="note-title">Test with Lorem</h3>
                                 <p class="note-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, voluptatibus. Facere eius quibusdam ipsum corporis ipsam maxime odit sed. Necessitatibus fuga inventore repellat aperiam quam? Sint, praesentium. Consequuntur, cupiditate incidunt.</p>
@@ -83,8 +110,8 @@ if(!isset($_SESSION['loggedin'])) {
                                     
                                 </div>
                             </section>
-                        </section>
-                        <section class="note-card">
+                        </section> -->
+                        <!-- <section class="note-card">
                             <section class="note-body-wrapper">
                                 <h3 class="note-title">Test with Lorem</h3>
                                 <p class="note-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, voluptatibus. Facere eius quibusdam ipsum corporis ipsam maxime odit sed. Necessitatibus fuga inventore repellat aperiam quam? Sint, praesentium. Consequuntur, cupiditate incidunt.</p>
@@ -95,7 +122,7 @@ if(!isset($_SESSION['loggedin'])) {
                                     
                                 </div>
                             </section>
-                        </section>
+                        </section> -->
                         <a href="create_note.php" class="cta-create">Create note</a>
                     </section> <!-- card-wrapper end -->
                 </div>
