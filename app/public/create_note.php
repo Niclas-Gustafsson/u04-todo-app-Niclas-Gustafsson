@@ -6,6 +6,10 @@ if(!isset($_SESSION['loggedin'])) {
     header('location: index.php');
     exit;
 }
+
+if(isset($_POST['submit'])){
+    createNote();
+}
 ?>
 
 
@@ -55,7 +59,7 @@ if(!isset($_SESSION['loggedin'])) {
             <section class="main-dashboard">
             <h1 class="create-heading">Create note</h1>
                 <!-- <h2 class="signup-sub-heading">Login to your account</h2> -->
-                <form action="" class="create-form" method="POST">
+                <form action="create_note.php" class="create-form" method="POST">
                     <label for="title">Title</label>
                     <input id="title" name="title" type="text">
                     <label for="note">Note</label>

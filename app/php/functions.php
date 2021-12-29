@@ -65,7 +65,13 @@ function getUserData() {
 //Function for creating notes (connected to specific user)
 function createNote() {
     global $db;
-
+    $noteTitle = $_POST['title'];
+    $noteBody = $_POST['note'];
+    $query = 'INSERT INTO notes(title, body) VALUES (:title, :body)';
+    $stmt = $db->prepare($query);
+    $stmt->bindValue(':title', $noteTitle);
+    $stmt->bindValue(':body', $noteBody);
+    $stmt->execute();
 }
 //Function for reading user specific notes (table relationships)
 
