@@ -378,6 +378,7 @@ main .container .main-dashboard .login-direct a {
 
 .home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper .note-icons a .icon {
   width: 1.7rem;
+  margin: 0 0.7rem 0 0.7rem;
 }
 
 .home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .cta-create {
