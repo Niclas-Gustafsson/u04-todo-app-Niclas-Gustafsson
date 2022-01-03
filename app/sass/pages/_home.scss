@@ -46,12 +46,20 @@
                                 .note-title {
                                     align-self: center;
                                     display: inline-block;
+
+                                    &.checked {
+                                        text-decoration: line-through;
+                                    }
                                 }
     
                                 .note-body {
                                     font-size: 1rem;
                                     display: inline-block;
                                     align-self: center;
+
+                                    &.checked {
+                                        text-decoration: line-through;
+                                    }
                                 }
     
                                 .note-icons {
@@ -63,8 +71,15 @@
                                             width: 1.7rem;
                                             margin: 0 0.7rem 0 0.7rem;
                                         }
+
+                                        .icon-checked {
+                                            color: $text-clr;
+                                        }
                                     }
                                 }
+                            }
+                            &.checked-note {
+                                background-color: #c4c4c4;
                             }
                         }
                         .cta-create {

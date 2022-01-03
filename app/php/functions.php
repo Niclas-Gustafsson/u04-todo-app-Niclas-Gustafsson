@@ -51,7 +51,7 @@ function authLogin() {
 }
 
 //Function for fetching userdata
-function getUserData() {
+/* function getUserData() {
     global $db;
     // $username = $_POST['username'];
     // $password = $_POST['password'];
@@ -61,7 +61,7 @@ function getUserData() {
     $stmt->execute();
     $user = $stmt->fetch();
     // var_dump($user);
-}
+} */
 //Function for creating notes (connected to specific user)
 function createNote() {
     global $db;
@@ -99,6 +99,22 @@ function updateNote() {
     $stmt->bindParam(':title', $title, PDO::PARAM_STR,255);
     $stmt->bindParam(':body', $body, PDO::PARAM_STR,255);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT,255);
+    if($stmt->execute()) {
+        header('location: home.php');
+    } else {
+        print_r($db->errorInfo());
+    }
+}
+
+//Function for checking a note as cleared
+function checkedNote() {
+    global $db;
+    global $id;
+    $tickedNote = 1;
+    $query = 'UPDATE notes SET checked = :checked WHERE noteID = :id';
+    $stmt = $db->prepare($query);
+    $stmt->bindValue(':checked', $tickedNote);
+    $stmt->bindValue(':id', $id);
     if($stmt->execute()) {
         header('location: home.php');
     } else {

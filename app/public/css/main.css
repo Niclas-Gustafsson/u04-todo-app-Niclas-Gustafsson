@@ -359,12 +359,20 @@ main .container .main-dashboard .login-direct a {
   display: inline-block;
 }
 
+.home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper .note-title.checked {
+  text-decoration: line-through;
+}
+
 .home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper .note-body {
   font-size: 1rem;
   display: inline-block;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper .note-body.checked {
+  text-decoration: line-through;
 }
 
 .home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper .note-icons {
@@ -379,6 +387,14 @@ main .container .main-dashboard .login-direct a {
 .home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper .note-icons a .icon {
   width: 1.7rem;
   margin: 0 0.7rem 0 0.7rem;
+}
+
+.home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper .note-icons a .icon-checked {
+  color: #3D3D3D;
+}
+
+.home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card.checked-note {
+  background-color: #c4c4c4;
 }
 
 .home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .cta-create {

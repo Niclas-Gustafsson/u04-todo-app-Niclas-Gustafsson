@@ -10,11 +10,16 @@ if(!isset($_SESSION['loggedin'])) {
 //Fetch table data from notes table
 
 // getNote();
-$id = $_SESSION['id'];
-// echo $id;
-$stmt = $db->prepare('SELECT * FROM notes WHERE userID=:id');
-$stmt->bindParam(':id', $id);
-$stmt->execute();
+function getUserId() {
+    global $db;
+    global $stmt;
+    $id = $_SESSION['id'];
+    // echo $id;
+    $stmt = $db->prepare('SELECT * FROM notes WHERE userID=:id');
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+}
+getUserId();
 // $result = $stmt->fetchAll();
 // var_dump($result);
 /* while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -84,8 +89,26 @@ $stmt->execute();
                                     // $_SESSION['noteBody'] = $row['body'];
                                     // $title = $_SESSION['noteTitle'];
                                     // $body = $_SESSION['noteBody'];
+                                    if($row['checked'] == 1) {
+
+                                    
                                     
                             ?>
+                            <section class="note-card checked-note">
+                            <section class="note-body-wrapper ">
+                                <h3 class="note-title checked"><?php echo $row['title'];?></h3>
+                                <p class="note-body checked"><?php echo $row['body'];?></p>
+                                <div class="note-icons">
+                                    <a  href="update.php?id=<?php echo $row['noteID']?>&titleValue=<?php echo $row['title']?>&bodyValue=<?php echo $row['body'];?>"><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
+                                    <a href=""><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
+                                    <a href="checked.php?id=<?php echo $row['noteID']?>"><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
+                                    
+                                </div>
+                            </section>
+                            </section>
+                            <?php } else {?> <!-- End of if statment, start of else statement -->
+                            
+
                             <section class="note-card">
                             <section class="note-body-wrapper">
                                 <h3 class="note-title"><?php echo $row['title'];?></h3>
@@ -93,12 +116,12 @@ $stmt->execute();
                                 <div class="note-icons">
                                     <a  href="update.php?id=<?php echo $row['noteID']?>&titleValue=<?php echo $row['title']?>&bodyValue=<?php echo $row['body'];?>"><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
                                     <a href=""><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
-                                    <a href=""><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
+                                    <a href="checked.php?id=<?php echo $row['noteID']?>"><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
                                     
                                 </div>
                             </section>
                         </section>
-
+                        <?php } ?> <!-- End of else statment -->
                         <?php } ?> <!-- End of while loop -->
 
 

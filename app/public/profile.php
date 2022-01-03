@@ -7,7 +7,7 @@ if(!isset($_SESSION['loggedin'])) {
     exit;
 }
 
-getUserData();
+// getUserData();
 // global $user;
 // var_dump($_SESSION['id']);
 ?>
