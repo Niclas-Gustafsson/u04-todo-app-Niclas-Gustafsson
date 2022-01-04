@@ -45,6 +45,7 @@ function authLogin() {
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['id'] = $user['id'];
+            $_SESSION['message'] = '';
 
             header('location: home.php');
     } else {
@@ -132,9 +133,22 @@ function deleteNote() {
     $stmt->bindValue(':id', $id);
     
     if($stmt->execute()) {
+        $_SESSION['message'] = 'Note was sucessfully deleted';
         header('location: home.php');
+        
     } else {
         print_r($db->errorInfo());
+    }
+}
+
+//Function for successfull query to get true or false value on home page to render notification popup.
+
+function popUp() {
+    global $msg;
+    $success = $_GET['complete'];
+
+    if($success == 1) {
+        $msg = '';
     }
 }
 //Function for reading cleared notes?

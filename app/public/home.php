@@ -6,10 +6,11 @@ if(!isset($_SESSION['loggedin'])) {
     header('location: index.php');
     exit;
 }
-
+//Message for popup, value depending on what query was made successfully.
+$msg = $_SESSION['message'];
+// echo $msg;
 //Fetch table data from notes table
 
-// getNote();
 function getUserId() {
     global $db;
     global $stmt;
@@ -73,6 +74,10 @@ getUserId();
                 </div>
             </nav>
             <section class="main-dashboard">
+                <section class="popup">
+                    <p class="notification">This is the notofication text</p>
+                    <img class="notify-close" src="./images/close.svg" alt="Close notification">
+                </section>
                 <h1 class="home-heading">Home</h1>
 
                 <!-- Wrapper for all notes -->
