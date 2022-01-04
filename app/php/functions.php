@@ -76,7 +76,11 @@ function createNote() {
     $stmt->bindValue(':userID', $id);
     $stmt->bindValue(':title', $noteTitle);
     $stmt->bindValue(':body', $noteBody);
-    $stmt->execute();
+    if($stmt->execute()) {
+        $_SESSION['message'] = "Note was successfully created.";
+    } else {
+        print_r($db->errorInfo());
+    }
 }
 //Function for reading user specific notes (table relationships)
 function getNote() {
@@ -103,6 +107,7 @@ function updateNote() {
     $stmt->bindParam(':body', $body, PDO::PARAM_STR,255);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT,255);
     if($stmt->execute()) {
+        $_SESSION['message'] = "Note was successfully updated.";
         header('location: home.php');
     } else {
         print_r($db->errorInfo());
@@ -119,6 +124,7 @@ function checkedNote() {
     $stmt->bindValue(':checked', $tickedNote);
     $stmt->bindValue(':id', $id);
     if($stmt->execute()) {
+        $_SESSION['message'] = "Wohoo you did it! Keep'em coming.";
         header('location: home.php');
     } else {
         print_r($db->errorInfo());

@@ -3,11 +3,14 @@ const hamburger = document.querySelector('#hamburger');
 const hamburgerLines = document.querySelector('.hamburger__lines');
 const mobileMenu = document.querySelector('.nav-items');
 // const navRight = document.querySelector('.nav-right');
+const popup = document.querySelector('.popup');
+const closePopup = document.querySelector('.notify-close');
 const nav = document.querySelector('.nav');
 let showMenu = false;
 
 //Eventlisteners
 hamburger.addEventListener("click", menuToggle);
+closePopup.addEventListener("click", closeNotify);
 
 
 
@@ -36,4 +39,12 @@ function menuToggle() {
 function fixedNav () {
     nav.classList.add('nav-lock');
 }
+
+//Close notification popup
+function closeNotify() {
+    popup.style.right = '-100%';
+    popup.style.opacity = '0';
+}
+
+
 

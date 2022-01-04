@@ -51,7 +51,7 @@ getUserId();
         <section class="container">
             <nav class="nav">
                 <div class="logo-wrapper nav-left">
-                    <a href="index.php"><img class="logo" src="./images/thapp-logo.svg" alt="Thapp logo"></a>
+                    <a href="home.php"><img class="logo" src="./images/thapp-logo.svg" alt="Thapp logo"></a>
                 </div>
                 <div id="hamburger" class="hamburger">
                     <span class="hamburger__lines"></span>
@@ -74,10 +74,17 @@ getUserId();
                 </div>
             </nav>
             <section class="main-dashboard">
-                <section class="popup">
-                    <p class="notification">This is the notofication text</p>
+                <!-- <section class="popup">
+                    <p class="notification">This is the notofication text. and this ios just some moreo filler text</p>
+                    <img class="notify-close" src="./images/close.svg" alt="Close notification">
+                </section> -->
+                <!-- Show popup if $_SESSION['message'] is not = empty string. Adds class of "show" to popup section-->
+                <?php if($msg != '') { ?>
+                    <section class="popup show">
+                    <p class="notification"><?php echo $msg; ?></p>
                     <img class="notify-close" src="./images/close.svg" alt="Close notification">
                 </section>
+                <?php } $_SESSION['message'] = '';?>
                 <h1 class="home-heading">Home</h1>
 
                 <!-- Wrapper for all notes -->
@@ -105,7 +112,7 @@ getUserId();
                                 <p class="note-body checked"><?php echo $row['body'];?></p>
                                 <div class="note-icons">
                                     <a  href="update.php?id=<?php echo $row['noteID']?>&titleValue=<?php echo $row['title']?>&bodyValue=<?php echo $row['body'];?>"><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
-                                    <a href=""><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
+                                    <a href="delete.php?id=<?php echo $row['noteID'];?>"><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
                                     <a href="checked.php?id=<?php echo $row['noteID']?>"><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
                                     
                                 </div>

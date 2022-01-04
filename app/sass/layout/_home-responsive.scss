@@ -38,6 +38,15 @@
                 width: 75%;
                 height: 90vh;
                 
+                .popup{
+
+                    &.show{
+                        top: 1rem;
+                        .notify-close {
+                            display: block;
+                        }
+                    }
+                }
                 .home-heading {
                     @include h1;
                 }
