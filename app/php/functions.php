@@ -27,6 +27,8 @@ function createUser() {
     // }
 }
 //Function for authenticating user login
+
+//Fix validation for creating user so there can´t be duplicates!!!!!.
 function authLogin() {
     global $db;
     $username = $_POST['username'];
@@ -122,7 +124,19 @@ function checkedNote() {
     }
 }
 //Function for deleting a note
-
+function deleteNote() {
+    global $db;
+    global $id;
+    $query = 'DELETE FROM notes WHERE noteID =:id';
+    $stmt = $db->prepare($query);
+    $stmt->bindValue(':id', $id);
+    
+    if($stmt->execute()) {
+        header('location: home.php');
+    } else {
+        print_r($db->errorInfo());
+    }
+}
 //Function for reading cleared notes?
 
 ?>

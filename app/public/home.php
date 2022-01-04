@@ -115,7 +115,7 @@ getUserId();
                                 <p class="note-body"><?php echo $row['body'];?></p>
                                 <div class="note-icons">
                                     <a  href="update.php?id=<?php echo $row['noteID']?>&titleValue=<?php echo $row['title']?>&bodyValue=<?php echo $row['body'];?>"><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
-                                    <a href=""><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
+                                    <a href="delete.php?id=<?php echo $row['noteID'];?>"><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
                                     <a href="checked.php?id=<?php echo $row['noteID']?>"><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
                                     
                                 </div>
