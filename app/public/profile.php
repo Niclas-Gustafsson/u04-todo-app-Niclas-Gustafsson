@@ -27,7 +27,7 @@ if(!isset($_SESSION['loggedin'])) {
         <section class="container">
         <nav class="nav">
                 <div class="logo-wrapper nav-left">
-                    <a href="index.php"><img class="logo" src="./images/thapp-logo.svg" alt="Thapp logo"></a>
+                    <a href="home.php"><img class="logo" src="./images/thapp-logo.svg" alt="Thapp logo"></a>
                 </div>
                 <div id="hamburger" class="hamburger">
                     <span class="hamburger__lines"></span>
@@ -45,7 +45,7 @@ if(!isset($_SESSION['loggedin'])) {
 
                         <li class="nav-item"><a class="nav-item__links" href="create_note.php">Create</a></li>
 
-                        <li class="nav-item"><a class="nav-item__links" href="logout.php">Logout</a></li>
+                        <li class="nav-item logout-btn"><a class="nav-item__links">Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -53,8 +53,10 @@ if(!isset($_SESSION['loggedin'])) {
             <section class="prompt-overlay">
                 <section class="prompt">
                     <p class="prompt-msg">Are you sure you want to log out?</p>
-                    <a class="logout-true" href="logout.php">Yes</a>
-                    <a class="logout-false" href="">No</a>
+                    <div class="prompt-btns">
+                        <a class="prompt-btn logout-false" href="">No</a>
+                        <a class="prompt-btn logout-true" href="logout.php">Yes</a>
+                    </div>
                 </section>
             </section>
             <section class="main-dashboard-profile">
@@ -65,7 +67,7 @@ if(!isset($_SESSION['loggedin'])) {
                         <p class="profile-username">Username: <?php echo $_SESSION['username'];?></p>
                         <p class="profile-email">Email: <?php echo $_SESSION['email'];?></p>
 
-                        <a class="profile-cta" href="logout.php">Log out</a>
+                        <button class="profile-cta logout-btn">Log out</button>
                     </section>
                     <section class="deleted-notes">
                         <h2 class="deleted-title">Deleted notes</h2>
@@ -116,7 +118,7 @@ if(!isset($_SESSION['loggedin'])) {
     </main>
     <footer>
         <img src="./images/thapp-logo.svg" alt="Thapp logo">
-        <p>&copy; Copyright Thapp Inc. 2021 </p>
+        <p>&copy; Copyright Thapp Inc. 2022 </p>
     </footer>
     <script src="js/index.js" defer></script>
 </body>

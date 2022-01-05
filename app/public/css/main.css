@@ -161,6 +161,7 @@ body {
   text-decoration: none;
   font-size: 2rem;
   color: #3D3D3D;
+  cursor: pointer;
 }
 
 .nav .nav-right .nav-items .nav-item__links.active {
@@ -288,6 +289,89 @@ main .container .main-dashboard .login-direct a {
 
 .home-main .container {
   background: linear-gradient(244.28deg, #379791 7.62%, rgba(51, 222, 140, 0) 107.36%);
+  overflow: hidden;
+}
+
+.home-main .container .prompt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+  display: none;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.home-main .container .prompt-overlay::after {
+  content: "";
+  position: absolute;
+  background: rgba(2, 2, 2, 0.7);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.home-main .container .prompt-overlay .prompt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10rem;
+  width: 80%;
+  max-width: 300px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 5;
+  border-radius: 10px;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+}
+
+.home-main .container .prompt-overlay .prompt .prompt-msg {
+  color: #3D3D3D;
+}
+
+.home-main .container .prompt-overlay .prompt .prompt-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin-top: 1rem;
+  /* .logout-true {
+                        
+                    }
+                    .logout-false {
+    
+                    } */
+}
+
+.home-main .container .prompt-overlay .prompt .prompt-btns .prompt-btn {
+  padding: 0.6em 2.5rem;
+  background-color: #2A6D69;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .home-main .container .main-dashboard-profile {
@@ -355,6 +439,11 @@ main .container .main-dashboard .login-direct a {
   border-radius: 8px;
   font-size: 1.2rem;
   text-decoration: none;
+  border: none;
+}
+
+.home-main .container .main-dashboard-profile .dashboard-body .account-info .profile-cta:hover {
+  cursor: pointer;
 }
 
 .home-main .container .main-dashboard-profile .dashboard-body .deleted-notes {

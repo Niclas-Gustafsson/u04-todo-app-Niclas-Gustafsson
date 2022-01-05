@@ -59,7 +59,7 @@ getUserId();
 
                         <li class="nav-item"><a class="nav-item__links" href="create_note.php">Create</a></li>
 
-                        <li class="nav-item"><a class="nav-item__links" href="logout.php">Logout</a></li>
+                        <!-- <li class="nav-item"><a class="nav-item__links" href="logout.php">Logout</a></li> -->
                     </ul>
                 </div>
             </nav>

@@ -34,7 +34,7 @@ $noteID = $row->noteID;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
-    <title>Create note</title>
+    <title>Update note</title>
 </head>
 <body class="home-body">
 <main class="home-main">
@@ -59,7 +59,7 @@ $noteID = $row->noteID;
 
                         <li class="nav-item"><a class="nav-item__links" href="create_note.php">Create</a></li>
 
-                        <li class="nav-item"><a class="nav-item__links" href="logout.php">Logout</a></li>
+                        <!-- <li class="nav-item logout-btn"><a class="nav-item__links ">Logout</a></li> -->
                     </ul>
                 </div>
             </nav>

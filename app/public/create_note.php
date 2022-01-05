@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
         <section class="container">
         <nav class="nav">
                 <div class="logo-wrapper nav-left">
-                    <a href="index.php"><img class="logo" src="./images/thapp-logo.svg" alt="Thapp logo"></a>
+                    <a href="home.php"><img class="logo" src="./images/thapp-logo.svg" alt="Thapp logo"></a>
                 </div>
                 <div id="hamburger" class="hamburger">
                     <span class="hamburger__lines"></span>
@@ -53,7 +53,7 @@ if(isset($_POST['submit'])){
 
                         <li class="nav-item"><a class="nav-item__links active" href="create_note.php">Create</a></li>
 
-                        <li class="nav-item"><a class="nav-item__links" href="logout.php">Logout</a></li>
+                        <!-- <li class="nav-item"><a class="nav-item__links" href="logout.php">Logout</a></li> -->
                     </ul>
                 </div>
             </nav>

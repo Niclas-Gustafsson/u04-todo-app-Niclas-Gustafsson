@@ -1,18 +1,32 @@
 //Fetched DOM elements
+const nav = document.querySelector('.nav');
 const hamburger = document.querySelector('#hamburger');
 const hamburgerLines = document.querySelector('.hamburger__lines');
 const mobileMenu = document.querySelector('.nav-items');
 // const navRight = document.querySelector('.nav-right');
 const popup = document.querySelector('.popup');
 const closePopup = document.querySelector('.notify-close');
-const nav = document.querySelector('.nav');
+const logoutBtn = document.querySelectorAll('.logout-btn');
+const promptWindow = document.querySelector('.prompt-overlay');
 let showMenu = false;
 
 //Eventlisteners
+/* document.addEventListener("DOMContentLoaded", function(){
+}); */
+
+    logoutBtn.forEach(element => {
+        
+        element.addEventListener("click", (e) => {
+            toggleLogout();
+        });
+    });
+
 hamburger.addEventListener("click", menuToggle);
-closePopup.addEventListener("click", closeNotify);
 
-
+// Removed issue with error message saying "Cannot read property of null (reading addEventListener)"
+if(closePopup) {
+    closePopup.addEventListener("click", closeNotify);
+}
 
 //Functions
 
@@ -48,6 +62,11 @@ function closeNotify() {
         popup.style.display = 'none';
 
     }, 500);
+}
+
+function toggleLogout() {
+    // const promptWindow = document.querySelector('.prompt-overlay');
+    promptWindow.style.display = 'block';
 }
 
 

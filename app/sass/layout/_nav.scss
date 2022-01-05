@@ -125,6 +125,7 @@
                 text-decoration: none;
                 font-size: 2rem;
                 color: $text-clr;
+                cursor: pointer;
 
                 &.active {
                     color: $darkGreen;
