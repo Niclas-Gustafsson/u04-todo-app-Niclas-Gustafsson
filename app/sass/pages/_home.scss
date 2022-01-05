@@ -1,13 +1,15 @@
+
 .home-body {
+    overflow-x:hidden;
     .home-main {
-        
         .container {
             background: linear-gradient(244.28deg, #379791 7.62%, rgba(51, 222, 140, 0) 107.36%);
-            overflow: hidden;
+            overflow-x: hidden;
 
             .main-dashboard {
                 width: 95%;
                 padding: 2rem 0;
+                overflow: hidden;
                 .home-heading {
                     @include h1;
                 }

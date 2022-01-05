@@ -42,8 +42,12 @@ function fixedNav () {
 
 //Close notification popup
 function closeNotify() {
-    popup.style.right = '-100%';
+    popup.style.right = '-10%';
     popup.style.opacity = '0';
+    setTimeout(function() {
+        popup.style.display = 'none';
+
+    }, 500);
 }
 
 

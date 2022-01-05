@@ -9,9 +9,6 @@ if(!isset($_SESSION['loggedin'])) {
 
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,6 +49,14 @@ if(!isset($_SESSION['loggedin'])) {
                     </ul>
                 </div>
             </nav>
+            <!-- Prompt popup -->
+            <section class="prompt-overlay">
+                <section class="prompt">
+                    <p class="prompt-msg">Are you sure you want to log out?</p>
+                    <a class="logout-true" href="logout.php">Yes</a>
+                    <a class="logout-false" href="">No</a>
+                </section>
+            </section>
             <section class="main-dashboard-profile">
                 <h1 class="profile-heading">Profile</h1>
                 <section class="dashboard-body">

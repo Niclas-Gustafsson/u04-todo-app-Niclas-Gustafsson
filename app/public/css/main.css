@@ -1,3 +1,8 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   margin: 0 auto;
   padding: 0;
@@ -449,14 +454,19 @@ main .container .main-dashboard .login-direct a {
   background-color: #ffffff;
 }
 
+.home-body {
+  overflow-x: hidden;
+}
+
 .home-body .home-main .container {
   background: linear-gradient(244.28deg, #379791 7.62%, rgba(51, 222, 140, 0) 107.36%);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .home-body .home-main .container .main-dashboard {
   width: 95%;
   padding: 2rem 0;
+  overflow: hidden;
 }
 
 .home-body .home-main .container .main-dashboard .home-heading {
