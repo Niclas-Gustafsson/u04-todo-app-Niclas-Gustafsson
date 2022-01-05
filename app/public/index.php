@@ -49,7 +49,7 @@
     </main>
     <footer>
         <img src="./images/thapp-logo.svg" alt="Thapp logo">
-        <p>&copy; Copyright Thapp Inc. 2021 </p>
+        <p>&copy; Copyright Thapp Inc. 2022 </p>
     </footer>
 
     <script src="js/index.js" defer></script>
