@@ -11,7 +11,6 @@ if(isset($_POST['submit'])){
     createNote();
 }
 
-// echo $_SESSION['id'];
 ?>
 
 
@@ -60,14 +59,12 @@ if(isset($_POST['submit'])){
             </nav>
             <section class="main-dashboard">
             <h1 class="create-heading">Create note</h1>
-                <!-- <h2 class="signup-sub-heading">Login to your account</h2> -->
                 <form action="create_note.php" class="create-form" method="POST">
                     <label for="title">Title</label>
                     <input id="title" name="title" type="text">
                     <label for="note">Note</label>
                     <textarea id="note" name="note"></textarea>
                     <input type="submit" name="submit" value="Add note">
-                    <!-- <input id="create-btn" type="submit" name="submit" value="Add note"> -->
                 </form>
                 <p class="login-direct">Click here to see <a href="home.php">Notes</a></p>
             </section>

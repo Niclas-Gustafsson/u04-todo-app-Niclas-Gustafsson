@@ -451,6 +451,7 @@ main .container .main-dashboard .login-direct a {
 
 .home-body .home-main .container {
   background: linear-gradient(244.28deg, #379791 7.62%, rgba(51, 222, 140, 0) 107.36%);
+  overflow: hidden;
 }
 
 .home-body .home-main .container .main-dashboard {

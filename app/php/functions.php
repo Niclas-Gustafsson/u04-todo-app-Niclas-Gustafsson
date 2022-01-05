@@ -147,16 +147,6 @@ function deleteNote() {
     }
 }
 
-//Function for successfull query to get true or false value on home page to render notification popup.
-
-function popUp() {
-    global $msg;
-    $success = $_GET['complete'];
-
-    if($success == 1) {
-        $msg = '';
-    }
-}
 //Function for reading cleared notes?
 
 ?>

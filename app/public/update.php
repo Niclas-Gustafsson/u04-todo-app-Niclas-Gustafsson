@@ -7,14 +7,8 @@ if(!isset($_SESSION['loggedin'])) {
     header('location: index.php');
     exit;
 }
-/* $titleValue = $_GET['titleValue'];
-$bodyValue = $_GET['bodyValue'];
-$id = $_GET['id']; */
-/* echo $id;
-echo $titleValue; */
 
 $id = $_GET['id'];
-// echo $id;
 
 $query = 'SELECT * FROM notes WHERE noteID= :id';
 $stmt = $db->prepare($query);
@@ -71,15 +65,13 @@ $noteID = $row->noteID;
             </nav>
             <section class="main-dashboard">
             <h1 class="create-heading">Update note</h1>
-                <!-- <h2 class="signup-sub-heading">Login to your account</h2> -->
                 <form action="update_record.php" class="create-form" method="POST">
                     <input type="hidden" name="id" value="<?php echo $id?>">
                     <label for="title">Title</label>
                     <input id="title" name="title" type="text" value="<?php echo $row->title; ?>">
                     <label for="note">Note</label>
                     <textarea id="note" name="note" ><?php echo $row->body;?></textarea>
-                    <input type="submit" name="submit" value="Add note">
-                    <!-- <input id="create-btn" type="submit" name="submit" value="Add note"> -->
+                    <input type="submit" name="submit" value="Update note">
                 </form>
                 <p class="login-direct">Click here to see <a href="home.php">Notes</a></p>
             </section>
