@@ -1,5 +1,6 @@
 <?php
 include '../php/db.php';
+include '../php/messageArrays.php';
 session_start();
 //Function to get notes from the logged in user and list the created ones.
 function getUserId()
@@ -54,10 +55,6 @@ function createUser()
         $stmt->bindValue(':email', $email);
         $stmt->execute();
     }
-
-
-
-    // }
 }
 //Function for authenticating user login
 
@@ -90,6 +87,7 @@ function authLogin()
 //Function for creating notes (connected to specific user)
 function createNote()
 {
+    global $createMsg;
     global $db;
     $noteTitle = $_POST['title'];
     $noteBody = $_POST['note'];
@@ -100,7 +98,8 @@ function createNote()
     $stmt->bindValue(':title', $noteTitle);
     $stmt->bindValue(':body', $noteBody);
     if ($stmt->execute()) {
-        $_SESSION['message'] = "Note was successfully created.";
+        $_SESSION['message'] = randomMsg($createMsg);
+        // $_SESSION['message'] = "Note was successfully created.";
     } else {
         print_r($db->errorInfo());
     }
@@ -119,6 +118,7 @@ function getNote()
 //Function for updating a note
 function updateNote()
 {
+    global $updateMsg;
     global $db;
     $title = $_POST['title'];
     $body = $_POST['note'];
@@ -129,7 +129,8 @@ function updateNote()
     $stmt->bindParam(':body', $body, PDO::PARAM_STR, 255);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT, 255);
     if ($stmt->execute()) {
-        $_SESSION['message'] = "Note was successfully updated.";
+        $_SESSION['message'] = randomMsg($updateMsg);
+        // $_SESSION['message'] = "Note was successfully updated.";
         header('location: home.php');
     } else {
         print_r($db->errorInfo());
@@ -139,6 +140,8 @@ function updateNote()
 //Function for checking a note as cleared
 function checkedNote()
 {
+    global $clearMsg;
+    global $undoMsg;
     global $db;
     global $id;
     $tickedNote = 0;
@@ -149,10 +152,12 @@ function checkedNote()
     $getResult = $getstmt->fetch();
 
     if ($getResult['checked'] == Null) {
-        $_SESSION['message'] = "Wohoo you did it! Keep'em coming.";
+        $_SESSION['message'] = randomMsg($clearMsg);
+        // $_SESSION['message'] = "Wohoo you did it! Keep'em coming.";
         $tickedNote = 1;
     } elseif ($getResult['checked'] == 1) {
-        $_SESSION['message'] = "We all deserve a 2nd chance (:";
+        $_SESSION['message'] = randomMsg($undoMsg);
+        // $_SESSION['message'] = "We all deserve a 2nd chance (:";
         $tickedNote = NULL;
     }
 
@@ -184,4 +189,11 @@ function deleteNote()
     }
 }
 
-//Function for reading cleared notes?
+//Function to get random message from array to pass to $_SESSION['message'] variable.
+
+function randomMsg($msgArray)
+{
+    $randomNum = rand(0, 2);
+    $randomMsg = $msgArray[$randomNum];
+    return $randomMsg;
+}
