@@ -1,8 +1,8 @@
-<?php 
+<?php
 include '../php/db.php';
 include '../php/functions.php';
-
-if(isset($_POST['submit'])) {
+// session_start();
+if (isset($_POST['submit'])) {
     createUser();
 }
 ?>
@@ -10,6 +10,7 @@ if(isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,8 +22,9 @@ if(isset($_POST['submit'])) {
     <link rel="stylesheet" href="/css/main.css">
     <title>Thapp signup</title>
 </head>
+
 <body class="signup-body">
-<main class="signup-main">
+    <main class="signup-main">
         <section class="container">
             <nav class="nav">
                 <div class="logo-wrapper nav-left">
@@ -41,9 +43,17 @@ if(isset($_POST['submit'])) {
                 </div>
             </nav>
             <section class="main-dashboard">
-            <img class="dashboard-img" src="./images/thapp-logo.svg" alt="Thapp logo">
+                <img class="dashboard-img" src="./images/thapp-logo.svg" alt="Thapp logo">
                 <h1 class="signup-heading">Thapp</h1>
                 <h2 class="signup-sub-heading">Create a new account</h2>
+                <p><?php
+                    if (isset($_SESSION['message'])) {
+
+                        echo $_SESSION['message'];
+                        $_SESSION['message'] = "";
+                    }
+
+                    ?></p>
                 <form action="" class="signup-form" method="POST">
                     <label for="fullName">Full name</label>
                     <input id="fullName" name="fullName" type="text">
@@ -65,4 +75,5 @@ if(isset($_POST['submit'])) {
     </footer>
     <script src="js/index.js" defer></script>
 </body>
+
 </html>

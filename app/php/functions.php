@@ -1,7 +1,23 @@
 <?php
 include '../php/db.php';
 session_start();
-
+//Function for checking db if username already exists.
+function getUsers($uname)
+{
+    $found = NULL;
+    global $db;
+    $query = 'SELECT * FROM users WHERE username=:username';
+    $stmt = $db->prepare($query);
+    $stmt->bindParam(':username', $uname);
+    $stmt->execute();
+    $result = $stmt->fetch();
+    if ($result > 0) {
+        $found = $result['username'];
+    } else {
+        $found = "";
+    }
+    return $found;
+}
 //Function for creating user in database
 function createUser()
 {
@@ -10,18 +26,26 @@ function createUser()
     $username = $_POST['username'];
     $password = $_POST['password'];
     $email = $_POST['email'];
+    $userFound = getUsers($username);
     $hash = password_hash($password, PASSWORD_DEFAULT);
     if (!$db) {
         exit('Database connection failed.');
     }
+    if ($userFound == $username) {
+        $_SESSION['message'] = "User already exists, try something else.";
+        // die();
 
-    $query = 'INSERT INTO users(username, password, name, email) VALUES (:username, :password, :name, :email)';
-    $stmt = $db->prepare($query);
-    $stmt->bindValue(':username', $username);
-    $stmt->bindValue(':password', $hash);
-    $stmt->bindValue(':name', $name);
-    $stmt->bindValue(':email', $email);
-    $stmt->execute();
+    } else {
+        $query = 'INSERT INTO users(username, password, name, email) VALUES (:username, :password, :name, :email)';
+        $stmt = $db->prepare($query);
+        $stmt->bindValue(':username', $username);
+        $stmt->bindValue(':password', $hash);
+        $stmt->bindValue(':name', $name);
+        $stmt->bindValue(':email', $email);
+        $stmt->execute();
+    }
+
+
 
     // }
 }
