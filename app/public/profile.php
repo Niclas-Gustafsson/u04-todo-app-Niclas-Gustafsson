@@ -78,7 +78,6 @@ getUserId();
                         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                             if ($row['checked'] == 1) {
                         ?>
-
                                 <div class="deleted-note">
                                     <h3 class="deleted-title"><?= $row['title']; ?></h3>
                                     <a href="delete.php?id=<?php echo $row['noteID']; ?>"><img src="./images/trash.svg" alt=""></a>
