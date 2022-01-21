@@ -1,11 +1,14 @@
 //Resets
 @import './base/resets';
+
 //Abstracts
 @import './abstracts/variables';
 @import './abstracts/mixins';
+
 //Layout
 @import './layout/nav';
 @import './layout/footer';
+
 //Pages
 @import './pages/index';
 @import './pages/signup';
@@ -13,8 +16,8 @@
 @import './pages/profile';
 @import './pages/create_note';
 @import './pages/home';
-//Layout - responsive
 
+//Layout - responsive
 @import './layout/signup-responsive';
 @import './layout/login-responsive';
 @import './layout/profile-responsive';

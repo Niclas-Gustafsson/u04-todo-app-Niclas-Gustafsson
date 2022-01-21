@@ -355,12 +355,6 @@ main .container .main-dashboard .login-direct a {
           justify-content: space-between;
   width: 80%;
   margin-top: 1rem;
-  /* .logout-true {
-                        
-                    }
-                    .logout-false {
-    
-                    } */
 }
 
 .home-main .container .prompt-overlay .prompt .prompt-btns .prompt-btn {
@@ -652,6 +646,7 @@ main .container .main-dashboard .login-direct a {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  min-width: 280px;
 }
 
 .home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper {
@@ -722,6 +717,16 @@ main .container .main-dashboard .login-direct a {
   padding: 1rem 0;
   font-size: 1.2rem;
   border-radius: 8px;
+}
+
+.home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .create-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 
 @media screen and (min-width: 1024px) {

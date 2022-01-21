@@ -12,7 +12,6 @@
                 a {
                     .logo {
                         display:none;
-                        // width: 80px;
                     }
                 }
 
@@ -34,7 +33,6 @@
             }
     
             .main-dashboard {
-                // background-color: $white;
                 width: 75%;
                 height: 90vh;
                 
@@ -68,18 +66,16 @@
                         padding:1rem;
                         width: 60%;
                         height: 100%;
-                        
-                        // overflow-x: hidden;
                         overflow-y: scroll;
                         
                         
                         .note-card {
                             box-sizing: border-box;
                             width: 300px;
-                            // margin-right: 1rem;
 
                             .note-body-wrapper {
                                 padding-bottom: 1rem;
+
                                 .note-icons {
 
                                     a {
@@ -96,8 +92,6 @@
                             display: flex;
                             justify-content: center;
                             width: 100%;
-                            // background-color: black;
-                            
                         }
                     }
                 }
