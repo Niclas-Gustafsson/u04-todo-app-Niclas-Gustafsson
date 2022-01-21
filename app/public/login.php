@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +12,9 @@
     <link rel="stylesheet" href="/css/main.css">
     <title>Thapp login</title>
 </head>
+
 <body class="signup-body">
-<main class="signup-main">
+    <main class="signup-main">
         <section class="container">
             <nav class="nav">
                 <div class="logo-wrapper nav-left">
@@ -31,14 +33,14 @@
                 </div>
             </nav>
             <section class="main-dashboard">
-            <img class="dashboard-img" src="./images/thapp-logo.svg" alt="Thapp logo">
+                <img class="dashboard-img" src="./images/thapp-logo.svg" alt="Thapp logo">
                 <h1 class="signup-heading">Thapp</h1>
                 <h2 class="signup-sub-heading">Login to your account</h2>
                 <form action="authenticate.php" class="signup-form" method="POST">
                     <label for="username">Username</label>
                     <input id="username" name="username" type="text">
                     <label for="password">Password</label>
-                    <input id="password" name="password" type="text">
+                    <input id="password" name="password" type="password">
                     <input id="signup-btn" type="submit" name="submit" value="Login">
                 </form>
                 <p class="login-direct">Or click here to <a href="signup.php">Sign up</a></p>
@@ -51,4 +53,5 @@
     </footer>
     <script src="js/index.js" defer></script>
 </body>
+
 </html>

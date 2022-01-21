@@ -1,7 +1,7 @@
 <?php
 include '../php/db.php';
 session_start();
-
+//Function to get notes from the logged in user and list the created ones.
 function getUserId()
 {
     global $db;
@@ -141,7 +141,19 @@ function checkedNote()
 {
     global $db;
     global $id;
-    $tickedNote = 1;
+    $tickedNote = 0;
+    $getChecked = 'SELECT * FROM notes WHERE noteID = :id';
+    $getstmt = $db->prepare($getChecked);
+    $getstmt->bindParam(':id', $id);
+    $getstmt->execute();
+    $getResult = $getstmt->fetch();
+
+    if ($getResult['checked'] == Null) {
+        $tickedNote = 1;
+    } elseif ($getResult['checked'] == 1) {
+        $tickedNote = NULL;
+    }
+
     $query = 'UPDATE notes SET checked = :checked WHERE noteID = :id';
     $stmt = $db->prepare($query);
     $stmt->bindValue(':checked', $tickedNote);

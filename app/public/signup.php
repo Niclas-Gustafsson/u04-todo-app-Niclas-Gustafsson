@@ -56,13 +56,13 @@ if (isset($_POST['submit'])) {
                     ?></p>
                 <form action="" class="signup-form" method="POST">
                     <label for="fullName">Full name</label>
-                    <input id="fullName" name="fullName" type="text">
+                    <input id="fullName" name="fullName" type="text" required>
                     <label for="username">Username</label>
-                    <input id="username" name="username" type="text">
+                    <input id="username" name="username" type="text" required>
                     <label for="password">Password</label>
-                    <input id="password" name="password" type="text">
+                    <input id="password" name="password" type="password" required>
                     <label for="email">Email</label>
-                    <input id="email" name="email" type="text">
+                    <input id="email" name="email" type="text" required>
                     <input id="signup-btn" type="submit" name="submit" value="Sign up!">
                 </form>
                 <p class="login-direct">Or click here to <a href="login.php">log in</a></p>
