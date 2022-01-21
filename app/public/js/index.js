@@ -31,6 +31,7 @@ function menuToggle() {
     if(!showMenu) {
         hamburgerLines.classList.add('open');
         mobileMenu.classList.add('nav-open');
+        mobileMenu.style.opacity = 1;
         showMenu = true;
         if(mobileMenu.classList.contains('nav-open')) {
             setTimeout(fixedNav, 500);
@@ -41,6 +42,7 @@ function menuToggle() {
         hamburgerLines.classList.remove('open');
         mobileMenu.classList.remove('nav-open');
         nav.classList.remove('nav-lock');
+        mobileMenu.style.opacity = 0;
         showMenu = false;
     }
 }

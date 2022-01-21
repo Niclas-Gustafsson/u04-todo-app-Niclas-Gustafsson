@@ -1,13 +1,13 @@
-<?php 
+<?php
 include '../php/db.php';
 include '../php/functions.php';
 
-if(!isset($_SESSION['loggedin'])) {
+if (!isset($_SESSION['loggedin'])) {
     header('location: index.php');
     exit;
 }
 
-if(isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
     createNote();
 }
 
@@ -15,6 +15,7 @@ if(isset($_POST['submit'])){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,10 +27,11 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" href="/css/main.css">
     <title>Create note</title>
 </head>
+
 <body class="home-body">
-<main class="home-main">
+    <main class="home-main">
         <section class="container">
-        <nav class="nav">
+            <nav class="nav">
                 <div class="logo-wrapper nav-left">
                     <a href="home.php"><img class="logo" src="./images/thapp-logo.svg" alt="Thapp logo"></a>
                 </div>
@@ -41,20 +43,18 @@ if(isset($_POST['submit'])){
                     <ul class="nav-items">
                         <li class="nav-item"><a class="nav-item__links" href="profile.php"><img src="./images/profile-default.svg" alt=""></a></li>
 
-                        <li class="nav-item"><a class="nav-item__links profile-name" href="profile.php"><?php echo $_SESSION['name'];?></a></li>
+                        <li class="nav-item"><a class="nav-item__links profile-name" href="profile.php"><?php echo $_SESSION['name']; ?></a></li>
 
                         <li class="nav-item"><a class="nav-item__links" href="profile.php">Profile</a></li>
 
                         <li class="nav-item"><a class="nav-item__links" href="home.php">Home</a></li>
 
                         <li class="nav-item"><a class="nav-item__links active" href="create_note.php">Create</a></li>
-
-                        <!-- <li class="nav-item"><a class="nav-item__links" href="logout.php">Logout</a></li> -->
                     </ul>
                 </div>
             </nav>
             <section class="main-dashboard">
-            <h1 class="create-heading">Create note</h1>
+                <h1 class="create-heading">Create note</h1>
                 <form action="create_note.php" class="create-form" method="POST">
                     <label for="title">Title</label>
                     <input id="title" name="title" type="text">
@@ -70,7 +70,8 @@ if(isset($_POST['submit'])){
         <img src="./images/thapp-logo.svg" alt="Thapp logo">
         <p>&copy; Copyright Thapp Inc. 2022 </p>
     </footer>
-    
+
     <script src="js/index.js" defer></script>
 </body>
+
 </html>

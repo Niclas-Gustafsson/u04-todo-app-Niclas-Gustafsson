@@ -61,17 +61,10 @@ getUserId();
                         <li class="nav-item"><a class="nav-item__links active" href="home.php">Home</a></li>
 
                         <li class="nav-item"><a class="nav-item__links" href="create_note.php">Create</a></li>
-
-                        <!-- <li class="nav-item"><a class="nav-item__links" href="logout.php">Logout</a></li> -->
                     </ul>
                 </div>
             </nav>
             <section class="main-dashboard">
-                <!-- <section class="popup">
-                    <p class="notification">This is the notofication text. and this ios just some moreo filler text</p>
-                    <img class="notify-close" src="./images/close.svg" alt="Close notification">
-                </section> -->
-                <!-- Show popup if $_SESSION['message'] is not = empty string. Adds class of "show" to popup section-->
                 <?php if ($msg != '') { ?>
                     <section class="popup show">
                         <p class="notification"><?php echo $msg; ?></p>

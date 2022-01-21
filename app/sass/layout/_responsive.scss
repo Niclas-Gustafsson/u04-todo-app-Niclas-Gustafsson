@@ -17,8 +17,6 @@
                 flex-direction: row;
                 width: 80%;
                 height: 90%;
-                // height: 672px;
-                // overflow-y:scroll;
                 margin: 0 auto;
 
                 .nav {
@@ -50,6 +48,7 @@
                     transition: 0s;
 
                         .nav-items {
+                            opacity: 1;
                             position: relative;
                             transform: translateY(0);
                             width: 100%;

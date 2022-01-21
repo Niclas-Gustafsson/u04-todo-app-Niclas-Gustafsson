@@ -121,6 +121,7 @@ body {
   padding: 0;
   top: 0;
   left: 0;
+  opacity: 0;
   width: 100vw;
   height: 100vh;
   background-color: #E3FFF5;
@@ -486,12 +487,6 @@ main .container .main-dashboard .login-direct a {
 
 .home-main {
   color: #3D3D3D;
-}
-
-.home-main .container {
-  /* .signup-sub-heading {
-            @include h2;
-        } */
 }
 
 .home-main .container .create-heading {
@@ -949,6 +944,7 @@ main .container .main-dashboard .login-direct a {
     transition: 0s;
   }
   body main .container .nav .nav-right .nav-items {
+    opacity: 1;
     position: relative;
     -webkit-transform: translateY(0);
             transform: translateY(0);

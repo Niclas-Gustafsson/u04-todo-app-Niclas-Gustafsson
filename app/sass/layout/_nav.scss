@@ -15,7 +15,6 @@
         a {
             .logo {
                 height: 30px;
-                // width: 80px;
             }
         }
     }
@@ -60,7 +59,6 @@
             }
             // On click, rotate the hamburger and hide the middle bar. Coordinate before and after into an X.
             &.open {
-                // display: block;
                 transform: rotate(360deg);
                 background: transparent;
 
@@ -75,9 +73,7 @@
         }
     }
     .nav-right {
-        // width: 36px; //Not needed?
-        // @include transition-ease;
-        // @include transition-ease;
+
     .nav-items {
         display: flex;
         flex-direction: column;
@@ -88,18 +84,16 @@
         padding:0;
         top:0;
         left: 0;
+        opacity:0;
         width: 100vw;
         height: 100vh;
         background-color: $lightGreen;
         @include transition-ease;
         transform: translateY(-100%);
-        // transition: 1s;
 
         &.nav-open {
-            // display: flex;
             transform: translateY(0);
             @include transition-ease;
-            // transition: 1s;
 
             .nav-item {
                 list-style: none;
@@ -116,7 +110,6 @@
                 }
             }
         }
-        //Needed to have double code inside &.open and outside for the style to not go back to default?
         .nav-item {
             list-style: none;
             margin-bottom: 3rem;
