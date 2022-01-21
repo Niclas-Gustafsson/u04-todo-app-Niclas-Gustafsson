@@ -148,5 +148,3 @@ function deleteNote() {
 }
 
 //Function for reading cleared notes?
-
-?>

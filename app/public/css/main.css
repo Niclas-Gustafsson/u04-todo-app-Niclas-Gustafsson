@@ -725,6 +725,148 @@ main .container .main-dashboard .login-direct a {
 }
 
 @media screen and (min-width: 1024px) {
+  .signup-main .container .main-dashboard .signup-sub-heading {
+    margin-bottom: 1rem;
+  }
+  .signup-main .container .main-dashboard .signup-form {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home-main .container {
+    overflow-y: hidden;
+    background: linear-gradient(244.28deg, #379791 7.62%, rgba(51, 222, 140, 0) 107.36%);
+  }
+  .home-main .container .main-dashboard-profile {
+    padding: 2rem 1rem;
+    background-color: #E3FFF5;
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 75%;
+    height: 90vh;
+    border-radius: 0 10px 10px 0;
+  }
+  .home-main .container .main-dashboard-profile .dashboard-body {
+    height: 100%;
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-bottom: 1rem;
+    overflow-y: hidden;
+  }
+  .home-main .container .main-dashboard-profile .dashboard-body .account-info {
+    width: 50%;
+  }
+  .home-main .container .main-dashboard-profile .dashboard-body .deleted-notes {
+    margin: 0 0 0 2rem;
+    overflow-y: scroll;
+    height: 80%;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home-main {
+    width: 100vw;
+  }
+  .home-main .container {
+    border-radius: 10px;
+    width: 80%;
+  }
+  .home-main .container .nav {
+    width: 25%;
+  }
+  .home-main .container .nav a .logo {
+    display: none;
+  }
+  .home-main .container .nav .nav-right .nav-items .nav-item__links {
+    font-size: 1.3rem;
+  }
+  .home-main .container .nav .nav-right .nav-items .nav-item__links.profile-name {
+    font-size: 1rem;
+  }
+  .home-main .container .main-dashboard {
+    width: 75%;
+    height: 90vh;
+  }
+  .home-main .container .main-dashboard .popup.show {
+    top: 1rem;
+  }
+  .home-main .container .main-dashboard .popup.show .notify-close {
+    display: block;
+  }
+  .home-main .container .main-dashboard .home-heading {
+    font-size: 4rem;
+    margin: 1rem 0 1rem 0;
+    color: #2A6D69;
+    font-weight: 600;
+  }
+  .home-main .container .main-dashboard .notes-wrapper {
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .home-main .container .main-dashboard .notes-wrapper .note-head-wrapper {
+    width: 100%;
+  }
+  .home-main .container .main-dashboard .notes-wrapper .card-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+    width: 60%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 300px;
+  }
+  .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper {
+    padding-bottom: 1rem;
+  }
+  .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper .note-icons a .icon {
+    display: block;
+    width: 1.7rem;
+  }
+  .home-main .container .main-dashboard .notes-wrapper .card-wrapper .create-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   body {
     width: 100vw;
     height: 100vh;
@@ -836,132 +978,6 @@ main .container .main-dashboard .login-direct a {
   }
   body footer {
     display: none;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .signup-main .container .main-dashboard .signup-sub-heading {
-    margin-bottom: 1rem;
-  }
-  .signup-main .container .main-dashboard .signup-form {
-    width: 300px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .home-main {
-    width: 100vw;
-  }
-  .home-main .container {
-    border-radius: 10px;
-    width: 80%;
-  }
-  .home-main .container .nav {
-    width: 25%;
-  }
-  .home-main .container .nav a .logo {
-    display: none;
-  }
-  .home-main .container .nav .nav-right .nav-items .nav-item__links {
-    font-size: 1.3rem;
-  }
-  .home-main .container .nav .nav-right .nav-items .nav-item__links.profile-name {
-    font-size: 1rem;
-  }
-  .home-main .container .main-dashboard {
-    width: 75%;
-    height: 90vh;
-  }
-  .home-main .container .main-dashboard .popup.show {
-    top: 1rem;
-  }
-  .home-main .container .main-dashboard .popup.show .notify-close {
-    display: block;
-  }
-  .home-main .container .main-dashboard .home-heading {
-    font-size: 4rem;
-    margin: 1rem 0 1rem 0;
-    color: #2A6D69;
-    font-weight: 600;
-  }
-  .home-main .container .main-dashboard .notes-wrapper {
-    height: 100%;
-    overflow-y: hidden;
-    overflow-x: hidden;
-  }
-  .home-main .container .main-dashboard .notes-wrapper .note-head-wrapper {
-    width: 100%;
-  }
-  .home-main .container .main-dashboard .notes-wrapper .card-wrapper {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    width: 676px;
-    height: 100%;
-    overflow-y: scroll;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    width: 45%;
-  }
-  .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper {
-    padding-bottom: 1rem;
-  }
-  .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper .note-icons a .icon {
-    display: block;
-    width: 1.7rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .home-main .container {
-    overflow-y: hidden;
-    background: linear-gradient(244.28deg, #379791 7.62%, rgba(51, 222, 140, 0) 107.36%);
-  }
-  .home-main .container .main-dashboard-profile {
-    padding: 2rem 1rem;
-    background-color: #E3FFF5;
-    overflow-y: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 75%;
-    height: 90vh;
-    border-radius: 0 10px 10px 0;
-  }
-  .home-main .container .main-dashboard-profile .dashboard-body {
-    height: 100%;
-    width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding-bottom: 1rem;
-    overflow-y: hidden;
-  }
-  .home-main .container .main-dashboard-profile .dashboard-body .account-info {
-    width: 50%;
-  }
-  .home-main .container .main-dashboard-profile .dashboard-body .deleted-notes {
-    margin: 0 0 0 2rem;
-    overflow-y: scroll;
-    height: 80%;
-    width: 50%;
   }
 }
 /*# sourceMappingURL=main.css.map */

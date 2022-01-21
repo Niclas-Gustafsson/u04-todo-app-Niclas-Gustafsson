@@ -54,23 +54,28 @@
                     height: 100%;
                     overflow-y: hidden;
                     overflow-x: hidden;
+                    align-items: center;
                     
                     .note-head-wrapper {
                         width: 100%;
                     }
 
                     .card-wrapper {
-                        align-self: center;
-                        width: 676px;
+                        justify-content: center;
+                        flex-direction: row !important;
+                        flex-wrap: wrap;
+                        gap: 0.5rem;
+                        padding:1rem;
+                        width: 60%;
                         height: 100%;
+                        
                         // overflow-x: hidden;
                         overflow-y: scroll;
-                        flex-direction: row;
-                        // flex-flow: row wrap;
+                        
                         
                         .note-card {
                             box-sizing: border-box;
-                            width: 45%;
+                            width: 300px;
                             // margin-right: 1rem;
 
                             .note-body-wrapper {
@@ -86,6 +91,13 @@
                                     }
                                 }
                             }
+                        }
+                        .create-wrapper {
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
+                            // background-color: black;
+                            
                         }
                     }
                 }

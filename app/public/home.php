@@ -1,7 +1,7 @@
-<?php 
+<?php
 include '../php/functions.php';
 
-if(!isset($_SESSION['loggedin'])) {
+if (!isset($_SESSION['loggedin'])) {
     header('location: index.php');
     exit;
 }
@@ -9,7 +9,8 @@ if(!isset($_SESSION['loggedin'])) {
 $msg = $_SESSION['message'];
 
 //Fetch table data from notes table
-function getUserId() {
+function getUserId()
+{
     global $db;
     global $stmt;
     $id = $_SESSION['id'];
@@ -25,6 +26,7 @@ getUserId();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,8 +38,9 @@ getUserId();
     <link rel="stylesheet" href="/css/main.css">
     <title>Home</title>
 </head>
+
 <body class="home-body">
-<main class="home-main">
+    <main class="home-main">
         <section class="container">
             <nav class="nav">
                 <div class="logo-wrapper nav-left">
@@ -51,7 +54,7 @@ getUserId();
                     <ul class="nav-items">
                         <li class="nav-item"><a class="nav-item__links" href="profile.php"><img src="./images/profile-default.svg" alt=""></a></li>
 
-                        <li class="nav-item"><a class="nav-item__links profile-name" href="profile.php"><?php echo $_SESSION['name'];?></a></li>
+                        <li class="nav-item"><a class="nav-item__links profile-name" href="profile.php"><?php echo $_SESSION['name']; ?></a></li>
 
                         <li class="nav-item"><a class="nav-item__links" href="profile.php">Profile</a></li>
 
@@ -69,12 +72,13 @@ getUserId();
                     <img class="notify-close" src="./images/close.svg" alt="Close notification">
                 </section> -->
                 <!-- Show popup if $_SESSION['message'] is not = empty string. Adds class of "show" to popup section-->
-                <?php if($msg != '') { ?>
+                <?php if ($msg != '') { ?>
                     <section class="popup show">
-                    <p class="notification"><?php echo $msg; ?></p>
-                    <img class="notify-close" src="./images/close.svg" alt="Close notification">
-                </section>
-                <?php } $_SESSION['message'] = '';?>
+                        <p class="notification"><?php echo $msg; ?></p>
+                        <img class="notify-close" src="./images/close.svg" alt="Close notification">
+                    </section>
+                <?php }
+                $_SESSION['message'] = ''; ?>
                 <h1 class="home-heading">Home</h1>
 
                 <!-- Wrapper for all notes -->
@@ -85,42 +89,47 @@ getUserId();
                     <!-- Note card -->
                     <section class="card-wrapper">
                         <!-- Test for printing out table items -->
-                            <?php 
-                                while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                                    if($row['checked'] == 1) {
-       
-                            ?>
-                            <section class="note-card checked-note">
-                            <section class="note-body-wrapper ">
-                                <h3 class="note-title checked"><?php echo $row['title'];?></h3>
-                                <p class="note-body checked"><?php echo $row['body'];?></p>
-                                <div class="note-icons">
-                                    
-                                    <a href="delete.php?id=<?php echo $row['noteID'];?>"><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
-                                    <a href="checked.php?id=<?php echo $row['noteID']?>"><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
-                                    
-                                </div>
-                            </section>
-                            </section>
-                            <?php } else {?> <!-- End of if statment, start of else statement -->
-                            
+                        <?php
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                            if ($row['checked'] == 1) {
 
-                            <section class="note-card">
-                            <section class="note-body-wrapper">
-                                <h3 class="note-title"><?php echo $row['title'];?></h3>
-                                <p class="note-body"><?php echo $row['body'];?></p>
-                                <div class="note-icons">
-                                    <a  href="update.php?id=<?php echo $row['noteID']?>&titleValue=<?php echo $row['title']?>&bodyValue=<?php echo $row['body'];?>"><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
-                                    <a href="delete.php?id=<?php echo $row['noteID'];?>"><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
-                                    <a href="checked.php?id=<?php echo $row['noteID']?>"><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
-                                    
-                                </div>
-                            </section>
-                        </section>
-                        <?php } ?> <!-- End of else statment -->
-                        <?php } ?> <!-- End of while loop -->
+                        ?>
+                                <section class="note-card checked-note">
+                                    <section class="note-body-wrapper ">
+                                        <h3 class="note-title checked"><?php echo $row['title']; ?></h3>
+                                        <p class="note-body checked"><?php echo $row['body']; ?></p>
+                                        <div class="note-icons">
 
-                        <a href="create_note.php" class="cta-create">Create note</a>
+                                            <a href="delete.php?id=<?php echo $row['noteID']; ?>"><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
+                                            <a href="checked.php?id=<?php echo $row['noteID'] ?>"><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
+
+                                        </div>
+                                    </section>
+                                </section>
+                            <?php } else { ?>
+                                <!-- End of if statment, start of else statement -->
+
+
+                                <section class="note-card">
+                                    <section class="note-body-wrapper">
+                                        <h3 class="note-title"><?php echo $row['title']; ?></h3>
+                                        <p class="note-body"><?php echo $row['body']; ?></p>
+                                        <div class="note-icons">
+                                            <a href="update.php?id=<?php echo $row['noteID'] ?>&titleValue=<?php echo $row['title'] ?>&bodyValue=<?php echo $row['body']; ?>"><img class="icon" src="./images/edit.svg" alt="Edit note"></a>
+                                            <a href="delete.php?id=<?php echo $row['noteID']; ?>"><img class="icon" src="./images/trash.svg" alt="Delete note"></a>
+                                            <a href="checked.php?id=<?php echo $row['noteID'] ?>"><img class="icon" src="./images/check-dark.svg" alt="Mark note as done"></a>
+
+                                        </div>
+                                    </section>
+                                </section>
+                            <?php } ?>
+                            <!-- End of else statment -->
+                        <?php } ?>
+                        <!-- End of while loop -->
+                        <div class="create-wrapper">
+
+                            <a href="create_note.php" class="cta-create">Create note</a>
+                        </div>
                     </section> <!-- card-wrapper end -->
                 </div>
             </section>
@@ -132,4 +141,5 @@ getUserId();
     </footer>
     <script src="js/index.js" defer></script>
 </body>
+
 </html>

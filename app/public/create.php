@@ -3,11 +3,6 @@
 //Page not used anywhere in the project
 ?>
 
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
