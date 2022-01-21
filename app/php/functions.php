@@ -149,8 +149,10 @@ function checkedNote()
     $getResult = $getstmt->fetch();
 
     if ($getResult['checked'] == Null) {
+        $_SESSION['message'] = "Wohoo you did it! Keep'em coming.";
         $tickedNote = 1;
     } elseif ($getResult['checked'] == 1) {
+        $_SESSION['message'] = "We all deserve a 2nd chance (:";
         $tickedNote = NULL;
     }
 
@@ -159,7 +161,7 @@ function checkedNote()
     $stmt->bindValue(':checked', $tickedNote);
     $stmt->bindValue(':id', $id);
     if ($stmt->execute()) {
-        $_SESSION['message'] = "Wohoo you did it! Keep'em coming.";
+
         header('location: home.php');
     } else {
         print_r($db->errorInfo());
