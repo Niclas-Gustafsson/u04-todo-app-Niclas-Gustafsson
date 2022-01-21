@@ -9,18 +9,7 @@ if (!isset($_SESSION['loggedin'])) {
 $msg = $_SESSION['message'];
 
 //Fetch table data from notes table
-function getUserId()
-{
-    global $db;
-    global $stmt;
-    $id = $_SESSION['id'];
-    $stmt = $db->prepare('SELECT * FROM notes WHERE userID=:id');
-    $stmt->bindParam(':id', $id);
-    $stmt->execute();
-}
-
 getUserId();
-
 
 ?>
 

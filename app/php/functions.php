@@ -1,6 +1,16 @@
 <?php
 include '../php/db.php';
 session_start();
+
+function getUserId()
+{
+    global $db;
+    global $stmt;
+    $id = $_SESSION['id'];
+    $stmt = $db->prepare('SELECT * FROM notes WHERE userID=:id');
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+}
 //Function for checking db if username already exists.
 function getUsers($uname)
 {
