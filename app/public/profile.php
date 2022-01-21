@@ -1,16 +1,17 @@
-<?php 
+<?php
 include '../php/db.php';
 include '../php/functions.php';
 
-if(!isset($_SESSION['loggedin'])) {
+if (!isset($_SESSION['loggedin'])) {
     header('location: index.php');
     exit;
 }
-
+getUserId();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,10 +23,11 @@ if(!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="/css/main.css">
     <title>Profile</title>
 </head>
+
 <body class="home-body">
-<main class="home-main">
+    <main class="home-main">
         <section class="container">
-        <nav class="nav">
+            <nav class="nav">
                 <div class="logo-wrapper nav-left">
                     <a href="home.php"><img class="logo" src="./images/thapp-logo.svg" alt="Thapp logo"></a>
                 </div>
@@ -37,7 +39,7 @@ if(!isset($_SESSION['loggedin'])) {
                     <ul class="nav-items">
                         <li class="nav-item"><a class="nav-item__links" href="profile.php"><img src="./images/profile-default.svg" alt=""></a></li>
 
-                        <li class="nav-item"><a class="nav-item__links profile-name" href="profile.php"><?php echo $_SESSION['name'];?></a></li>
+                        <li class="nav-item"><a class="nav-item__links profile-name" href="profile.php"><?php echo $_SESSION['name']; ?></a></li>
 
                         <li class="nav-item"><a class="nav-item__links active" href="profile.php">Profile</a></li>
 
@@ -63,54 +65,30 @@ if(!isset($_SESSION['loggedin'])) {
                 <h1 class="profile-heading">Profile</h1>
                 <section class="dashboard-body">
                     <section class="account-info">
-                        <p class="profile-name">Full name: <?php echo $_SESSION['name'];?></p>
-                        <p class="profile-username">Username: <?php echo $_SESSION['username'];?></p>
-                        <p class="profile-email">Email: <?php echo $_SESSION['email'];?></p>
+                        <p class="profile-name">Full name: <?php echo $_SESSION['name']; ?></p>
+                        <p class="profile-username">Username: <?php echo $_SESSION['username']; ?></p>
+                        <p class="profile-email">Email: <?php echo $_SESSION['email']; ?></p>
 
                         <button class="profile-cta logout-btn">Log out</button>
                     </section>
                     <section class="deleted-notes">
-                        <h2 class="deleted-title">Deleted notes</h2>
-                        <div class="deleted-note">
-                            <h3 class="deleted-title">Title of deleted note here</h3>
-                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
-                        </div>
-                        <div class="deleted-note">
-                            <h3 class="deleted-title">Title of deleted note here</h3>
-                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
-                        </div>
-                        <div class="deleted-note">
-                            <h3 class="deleted-title">Title of deleted note here</h3>
-                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
-                        </div>
-                        <div class="deleted-note">
-                            <h3 class="deleted-title">Title of deleted note here</h3>
-                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
-                        </div>
-                        <div class="deleted-note">
-                            <h3 class="deleted-title">Title of deleted note here</h3>
-                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
-                        </div>
-                        <div class="deleted-note">
-                            <h3 class="deleted-title">Title of deleted note here</h3>
-                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
-                        </div>
-                        <div class="deleted-note">
-                            <h3 class="deleted-title">Title of deleted note here</h3>
-                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
-                        </div>
-                        <div class="deleted-note">
-                            <h3 class="deleted-title">Title of deleted note here</h3>
-                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
-                        </div>
-                        <div class="deleted-note">
-                            <h3 class="deleted-title">Title of deleted note here</h3>
-                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
-                        </div>
-                        <div class="deleted-note">
-                            <h3 class="deleted-title">Title of deleted note here</h3>
-                            <a href="delete.php"><img src="./images/trash.svg" alt=""></a>
-                        </div>
+                        <h2 class="deleted-title">Cleared notes</h2>
+
+                        <?php
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                            if ($row['checked'] == 1) {
+                        ?>
+
+                                <div class="deleted-note">
+                                    <h3 class="deleted-title"><?= $row['title']; ?></h3>
+                                    <a href="delete.php?id=<?php echo $row['noteID']; ?>"><img src="./images/trash.svg" alt=""></a>
+                                </div>
+
+                        <?php
+                            }
+                        }
+                        ?>
+
                     </section>
                 </section> <!-- dashboard-body end -->
             </section>
@@ -122,4 +100,5 @@ if(!isset($_SESSION['loggedin'])) {
     </footer>
     <script src="js/index.js" defer></script>
 </body>
+
 </html>

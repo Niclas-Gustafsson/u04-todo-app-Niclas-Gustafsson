@@ -460,10 +460,14 @@ main .container .main-dashboard .login-direct a {
 }
 
 .home-main .container .main-dashboard-profile .dashboard-body .deleted-notes .deleted-note {
+  width: 280px;
   margin: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #c4c4c4;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -662,6 +666,7 @@ main .container .main-dashboard .login-direct a {
 }
 
 .home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper .note-title.checked {
+  color: #3D3D3D;
   text-decoration: line-through;
 }
 
@@ -674,6 +679,7 @@ main .container .main-dashboard .login-direct a {
 }
 
 .home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper .note-body.checked {
+  color: #3D3D3D;
   text-decoration: line-through;
 }
 
@@ -691,12 +697,8 @@ main .container .main-dashboard .login-direct a {
   margin: 0 0.7rem 0 0.7rem;
 }
 
-.home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card .note-body-wrapper .note-icons a .icon-checked {
-  color: #3D3D3D;
-}
-
 .home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .note-card.checked-note {
-  background-color: #c4c4c4;
+  background-color: #9fb3b2;
 }
 
 .home-body .home-main .container .main-dashboard .notes-wrapper .card-wrapper .cta-create {

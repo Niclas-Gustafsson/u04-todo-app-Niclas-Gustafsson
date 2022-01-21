@@ -88,6 +88,7 @@
                                     display: inline-block;
 
                                     &.checked {
+                                        color: $text-clr;
                                         text-decoration: line-through;
                                     }
                                 }
@@ -98,6 +99,7 @@
                                     align-self: center;
 
                                     &.checked {
+                                        color: $text-clr;
                                         text-decoration: line-through;
                                     }
                                 }
@@ -110,15 +112,11 @@
                                             width: 1.7rem;
                                             margin: 0 0.7rem 0 0.7rem;
                                         }
-
-                                        .icon-checked {
-                                            color: $text-clr;
-                                        }
                                     }
                                 }
                             }
                             &.checked-note {
-                                background-color: #c4c4c4;
+                                background-color: #9fb3b2;
                             }
                         }
                         .cta-create {

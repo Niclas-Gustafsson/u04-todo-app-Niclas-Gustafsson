@@ -116,8 +116,10 @@
                     align-items: center;
                     border-radius: 8px;
                     .deleted-note {
+                        width: 280px;
                         margin: 0.5rem;
                         display:flex;
+                        justify-content: space-between;
                         background-color: #c4c4c4;
                         box-sizing: border-box;
                         padding: 0.3rem;
