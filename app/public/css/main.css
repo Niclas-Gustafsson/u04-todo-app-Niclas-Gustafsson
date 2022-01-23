@@ -265,11 +265,14 @@ main .container .main-dashboard .login-direct a {
 }
 
 .signup-main .container .signup-form {
-  width: 90%;
+  width: 100%;
+  max-width: 300px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .signup-main .container .signup-form input {
-  width: 278px;
+  width: 98%;
   height: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -841,7 +844,7 @@ main .container .main-dashboard .login-direct a {
         flex-wrap: wrap;
     gap: 0.5rem;
     padding: 1rem;
-    width: 60%;
+    width: 70%;
     height: 100%;
     overflow-y: scroll;
   }

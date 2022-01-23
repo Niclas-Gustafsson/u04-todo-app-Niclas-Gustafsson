@@ -84,7 +84,7 @@ function authLogin()
     }
 }
 
-//Function for creating notes (connected to specific user)
+//Function for creating notes for logged in user
 function createNote()
 {
     global $createMsg;

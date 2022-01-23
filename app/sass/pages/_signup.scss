@@ -10,10 +10,12 @@
             @include h2;
         }
         .signup-form {
-            width: 90%;
+            width: 100%;
+            max-width: 300px;
+            box-sizing: border-box;
 
             input {
-                width: 278px;
+                width: 98%;
                 height: 1.5rem;
                 margin-bottom: 1rem;
             }
