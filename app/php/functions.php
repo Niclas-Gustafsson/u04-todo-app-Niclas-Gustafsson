@@ -2,7 +2,7 @@
 include '../php/db.php';
 include '../php/messageArrays.php';
 session_start();
-//Function to get notes from the logged in user and list the created ones.
+
 function getUserId()
 {
     global $db;
@@ -12,7 +12,7 @@ function getUserId()
     $stmt->bindParam(':id', $id);
     $stmt->execute();
 }
-//Function for checking db if username already exists.
+
 function getUsers($uname)
 {
     $found = NULL;
@@ -29,7 +29,7 @@ function getUsers($uname)
     }
     return $found;
 }
-//Function for creating user in database
+
 function createUser()
 {
     global $db;
@@ -44,8 +44,7 @@ function createUser()
     }
     if ($userFound == $username) {
         $_SESSION['message'] = "User already exists, try something else.";
-        // die();
-
+        exit();
     } else {
         $query = 'INSERT INTO users(username, password, name, email) VALUES (:username, :password, :name, :email)';
         $stmt = $db->prepare($query);
@@ -56,9 +55,7 @@ function createUser()
         $stmt->execute();
     }
 }
-//Function for authenticating user login
 
-//Fix validation for creating user so there can´t be duplicates!!!!!.
 function authLogin()
 {
     global $db;
@@ -84,7 +81,7 @@ function authLogin()
     }
 }
 
-//Function for creating notes for logged in user
+
 function createNote()
 {
     global $createMsg;
@@ -99,12 +96,11 @@ function createNote()
     $stmt->bindValue(':body', $noteBody);
     if ($stmt->execute()) {
         $_SESSION['message'] = randomMsg($createMsg);
-        // $_SESSION['message'] = "Note was successfully created.";
     } else {
         print_r($db->errorInfo());
     }
 }
-//Function for reading user specific notes (table relationships)
+
 function getNote()
 {
     global $db;
@@ -115,7 +111,7 @@ function getNote()
     $result = $stmt->fetchAll();
 }
 
-//Function for updating a note
+
 function updateNote()
 {
     global $updateMsg;
@@ -130,14 +126,12 @@ function updateNote()
     $stmt->bindParam(':id', $id, PDO::PARAM_INT, 255);
     if ($stmt->execute()) {
         $_SESSION['message'] = randomMsg($updateMsg);
-        // $_SESSION['message'] = "Note was successfully updated.";
         header('location: home.php');
     } else {
         print_r($db->errorInfo());
     }
 }
 
-//Function for checking a note as cleared
 function checkedNote()
 {
     global $clearMsg;
@@ -153,11 +147,9 @@ function checkedNote()
 
     if ($getResult['checked'] == Null) {
         $_SESSION['message'] = randomMsg($clearMsg);
-        // $_SESSION['message'] = "Wohoo you did it! Keep'em coming.";
         $tickedNote = 1;
     } elseif ($getResult['checked'] == 1) {
         $_SESSION['message'] = randomMsg($undoMsg);
-        // $_SESSION['message'] = "We all deserve a 2nd chance (:";
         $tickedNote = NULL;
     }
 
@@ -172,7 +164,7 @@ function checkedNote()
         print_r($db->errorInfo());
     }
 }
-//Function for deleting a note
+
 function deleteNote()
 {
     global $db;
@@ -188,8 +180,6 @@ function deleteNote()
         print_r($db->errorInfo());
     }
 }
-
-//Function to get random message from array to pass to $_SESSION['message'] variable.
 
 function randomMsg($msgArray)
 {
