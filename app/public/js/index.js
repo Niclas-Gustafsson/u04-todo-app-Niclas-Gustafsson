@@ -24,9 +24,6 @@ if(closePopup) {
     closePopup.addEventListener("click", closeNotify);
 }
 
-//Functions
-
-//Toggle menu for mobile
 function menuToggle() {
     if(!showMenu) {
         hamburgerLines.classList.add('open');
@@ -38,7 +35,6 @@ function menuToggle() {
         }
 
     } else {
-        // hamburger.classList.remove('open');
         hamburgerLines.classList.remove('open');
         mobileMenu.classList.remove('nav-open');
         nav.classList.remove('nav-lock');
@@ -52,7 +48,6 @@ function fixedNav () {
     nav.classList.add('nav-lock');
 }
 
-//Close notification popup
 function closeNotify() {
     popup.style.right = '-10%';
     popup.style.opacity = '0';
