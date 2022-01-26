@@ -1,7 +1,6 @@
 <?php
 include '../php/db.php';
 include '../php/functions.php';
-// session_start();
 if (isset($_POST['submit'])) {
     createUser();
 }

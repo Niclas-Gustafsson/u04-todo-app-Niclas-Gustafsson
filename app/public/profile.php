@@ -51,7 +51,6 @@ getUserId();
                     </ul>
                 </div>
             </nav>
-            <!-- Prompt popup -->
             <section class="prompt-overlay">
                 <section class="prompt">
                     <p class="prompt-msg">Are you sure you want to log out?</p>

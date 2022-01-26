@@ -44,6 +44,7 @@ function createUser()
     }
     if ($userFound == $username) {
         $_SESSION['message'] = "User already exists, try something else.";
+        header('location: signup.php');
         exit();
     } else {
         $query = 'INSERT INTO users(username, password, name, email) VALUES (:username, :password, :name, :email)';
@@ -53,6 +54,7 @@ function createUser()
         $stmt->bindValue(':name', $name);
         $stmt->bindValue(':email', $email);
         $stmt->execute();
+        $_SESSION['message'] = "Account created, head over to the login page!";
     }
 }
 
